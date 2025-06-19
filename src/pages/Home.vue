@@ -76,6 +76,8 @@ import ProductCard from "../components/ProductCard.vue";
 import { useRouter } from "vue-router";
 import { useCartStore } from "../stores/cart";
 
+const base = import.meta.env.BASE_URL;
+
 const router = useRouter();
 const cart = useCartStore();
 
@@ -104,7 +106,7 @@ const confirmAddToCart = () => {
 };
 
 onMounted(async () => {
-  const res = await axios.get("/data/products.json");
+  const res = await axios.get(`${base}/data/products.json`);
   products.value = res.data;
 });
 

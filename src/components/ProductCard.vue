@@ -1,6 +1,6 @@
 <template>
     <div class="border rounded p-3 bg-white">
-        <img :src="product.image" class="w-full object-cover mb-2 rounded cursor-pointer" @click="handlePreview" />
+        <img :src="base + product.image" class="w-full object-cover mb-2 rounded cursor-pointer" @click="handlePreview" />
         <div class="font-bold mb-1 text-base truncate">{{ product.name }}</div>
         <div class="text-red-500 font-semibold mb-2">NT$ {{ product.price }}</div>
         <van-button type="primary" block size="small" @click="handleAdd">
@@ -12,6 +12,8 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue'
 import { showImagePreview } from 'vant'
+
+const base = import.meta.env.BASE_URL;
 
 const props = defineProps({
     product: {
