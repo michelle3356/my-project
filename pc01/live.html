@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <style>
+      .live-content-bg {
+        background: #202020;
+      }
+
+      .live-content {
+        width: 1000px;
+        margin: auto;
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 20px;
+      }
+
+      .live-item {
+        width: calc((100% - 40px) / 3);
+        box-sizing: border-box;
+      }
+
+      .live-item:hover img {
+        border: 2px solid #f90;
+      }
+
+      .live-item img {
+        width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="live-content-bg">
+      <ul class="live-content">
+        <!-- we -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_we.png" alt="" />
+          </a>
+        </li>
+        <!-- wl -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_wl.png" alt="" />
+          </a>
+        </li>
+        <!-- bbin -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_bbin.png" alt="" />
+          </a>
+        </li>
+        <!-- ag -->
+        <!-- <li class="live-item">
+            <a href="javascript:void(0)"
+                <img src="images/live/live_ag.png" alt="" />
+            </a>
+        </li> -->
+        <!-- ag -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_ag.png" alt="" />
+          </a>
+        </li>
+        <!-- og -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_og.png" alt="" />
+          </a>
+        </li>
+        <!-- ab -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_ab.png" alt="" />
+          </a>
+        </li>
+        <!-- gc -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_gc.jpg" alt="" />
+          </a>
+        </li>
+        <!-- bg -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_bg.png" alt="" />
+          </a>
+        </li>
+        <!-- db -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_db.png" alt="" />
+          </a>
+        </li>
+        <!-- sexy -->
+        <li class="live-item">
+          <a href="javascript:void(0)">
+            <img src="images/live/live_sexy.png" alt="" />
+          </a>
+        </li>
+        <!-- pp -->
+        <li class="live-item">
+          <a href="javascript:void(0)" ?
+            >" >
+            <img src="images/live/live_pp.png" alt="" />
+          </a>
+        </li>
+        <!-- dp -->
+        <!-- <li class="live-item">
+            <a href="javascript:void(0)"
+                <img src="images/live/live_dp.png" alt="" />
+            </a>
+        </li> -->
+      </ul>
+    </div>
+    <div id="footer"></div>
+    <script>
+      $("#header").load("header.html", function () {
+        activateNavHighlight();
+      });
+      $("#footer").load("footer.html");
+    </script>
+  </body>
+</html>

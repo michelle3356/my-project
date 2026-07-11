@@ -1,0 +1,236 @@
+<style>
+  .header {
+    padding: 10px 40px;
+  }
+
+  .header-Content {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 70px;
+    margin-right: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    color: #6c6c6c;
+  }
+
+  .nav-links a.active {
+    color: #cfa869;
+    position: relative;
+  }
+
+  .nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #cfa869;
+  }
+
+  .nav-links a .img-nav-vip {
+    width: 90px;
+    height: 28px;
+  }
+
+  .right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .auth-buttons button {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .auth-buttons .register {
+    background-color: #cfa869;
+    color: #fff;
+  }
+
+  .auth-buttons .login {
+    background-color: transparent;
+    color: #cfa869;
+    border: 1px solid #cfa869;
+  }
+
+  .header-header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .header-header-right-nologin {
+    line-height: 24px;
+    background: #c8a675;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    border: 1px solid #c8a675;
+  }
+
+  .header-header-right-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    height: 100%;
+    cursor: pointer;
+    min-width: 60px;
+  }
+
+  .header-header-right-btn2 {
+    color: #c8a675;
+    background: #fff;
+    border-radius: 12px;
+  }
+
+  .header-header-right-login {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c8a675;
+    margin-left: 12px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .header-header-right-login:hover > div:first-child:after {
+    display: inline-block;
+  }
+
+  .header-header-right-login-btn {
+    width: 80px;
+    line-height: 24px;
+    text-align: center;
+    color: #c8a675;
+    border: 1px solid #c8a675;
+    border-radius: 12px;
+  }
+
+  .header-header-right-login-btn:after {
+    content: "";
+    display: none;
+    border-radius: 2px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid #c8a675;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 51px;
+  }
+
+  .header-header-right-login:hover .showlist {
+    max-height: 300px;
+    transition: all 0.3s linear;
+    border: 1px solid #c8a675;
+  }
+
+  .header-header-right-login-list {
+    width: 100px;
+    position: absolute;
+    z-index: 2;
+    left: -10px;
+    top: 65px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .header-header-right-login-list > a {
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c6c6c;
+  }
+
+  .header-header-right-login-list > a:hover {
+    background-color: hsla(35, 43%, 62%, 0.3);
+    color: #c8a675;
+  }
+</style>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<div class="header">
+  <div class="header-Content">
+    <div class="logo-nav">
+      <img src="images/logo.svg" alt="/" class="logo" />
+      <div class="nav-links">
+        <a class="nav-link-home" href="index.html">首页</a>
+        <a class="nav-link-sport" href="sport.html">体育</a>
+        <a class="nav-link-live" href="live.html">真人</a>
+        <a href="javascript:void(0)">彩票</a>
+        <a class="nav-link-dz" href="dz.html">电子</a>
+        <a class="nav-link-card" href="card.html">棋牌</a>
+        <a class="nav-link-fish" href="fish.html">捕鱼</a>
+        <a class="nav-link-dj" href="dj.html">电竞</a>
+        <a class="nav-link-promote" href="javascript:void(0)">优惠</a>
+        <a href="javascript:void(0)">
+          <img src="images/nav_vip.gif" class="img-nav-vip" />
+        </a>
+      </div>
+    </div>
+
+    <div class="header-header-right">
+      <div class="header-header-right-nologin">
+        <a href="reg.html" class="header-header-right-btn">注册</a>
+        <a
+          href="login.html"
+          class="header-header-right-btn header-header-right-btn2"
+          >登录</a
+        >
+      </div>
+      <!-- <div class="header-header-right-nologin">
+          <div class="header-header-right-btn" style="padding: 0 10px">
+            10000.00
+          </div>
+          <a href="javascript:void(0)" class="header-header-right-btn header-header-right-btn2"
+            >存款</a
+          >
+        </div>
+        <div class="header-header-right-login">
+          <div class="header-header-right-login-btn">个人中心</div>
+          <div class="header-header-right-login-list showlist">
+            <a href="javascript:void(0)">存款专区</a>
+            <a href="javascript:void(0)">提款专区</a>
+            <a href="javascript:void(0)">任务中心</a>
+            <a href="javascript:void(0)">游戏转账</a>
+            <a href="javascript:void(0)">资金明细</a>
+            <a href="javascript:void(0)">消息</a>
+            <a href="javascript:void(0)">退出</a>
+          </div>
+        </div> -->
+    </div>
+  </div>
+</div>

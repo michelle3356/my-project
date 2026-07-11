@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/iife.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jsencrypt.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/countUp.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/common_wac.js"></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/wac_style_v2.css" rel="stylesheet" />
+    <link href="css/inside-pages1.css" rel="stylesheet" />
+    <style>
+      #slotgame {
+        margin-top: 50px;
+      }
+      #slotgame .cgslot-body {
+        background: #fff;
+      }
+      #slotgame .cgslot-header {
+        background: #d5d5d5;
+      }
+      #slotgame .cgslot-bar {
+        background: #666;
+      }
+      #slotgame .cgslot-container {
+        width: 100%;
+      }
+      .dz-back {
+        background-size: 100% 100%;
+      }
+      .dz-list {
+        margin: 0px -11px 8px -19px;
+      }
+      .dz-list li {
+        padding: 0 18px;
+      }
+      .slots-tab ul.game-list > li {
+        position: relative;
+        width: 192px;
+        height: 55px;
+        margin: 1px 4px 5px 0;
+        border: 1px solid #dcdcdc;
+        background: linear-gradient(180deg, #fff 0, #f3f3f3);
+      }
+      .slots-tab {
+        border-block-start: inherit;
+        padding: 0px 0px 0px 0px;
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="over-box">
+      <div class="dz-back">
+        <div class="container">
+          <ul class="dz-list clearfix text-center">
+            <li>
+              <a href="javascript:void(0)" onclick="toGame('NPG', '65')">
+                <div class="dz-list-img">
+                  <img
+                    src="images/dz02.png"
+                  /><span></span>
+                </div>
+                <div class="dz-list-tt">
+                  <img
+                    src="images/dz-logo02.png"
+                  />PG电子
+                </div>
+                <div>
+                  <span class="dz-list-b"
+                    >超级彩池<b>CNY</b
+                    ><font id="caichi2">5,120,808,777</font></span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="on">
+              <a
+                href="javascript:void(0)"
+                onclick="toGame('MG', 'SMG_breakAway')"
+              >
+                <div class="dz-list-img">
+                  <img
+                    src="images/dz01.png"
+                  /><span></span>
+                </div>
+                <div class="dz-list-tt">
+                  <img
+                    src="images/dz-logo01.png"
+                  />MG电子
+                </div>
+                <div>
+                  <span class="dz-list-b"
+                    >超级彩池<b>CNY</b
+                    ><font id="caichi1">6,418,881,952</font></span
+                  >
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                onclick="toGame('CQ9', '99_cq9_mobile_html5_slot')"
+              >
+                <div class="dz-list-img">
+                  <img
+                    src="images/dz03.png"
+                  /><span></span>
+                </div>
+                <div class="dz-list-tt">
+                  <img
+                    src="images/dz-logo03.png"
+                  />CQ9电子
+                </div>
+                <div>
+                  <span class="dz-list-b"
+                    >超级彩池<b>CNY</b
+                    ><font id="caichi3">4,218,300,264</font></span
+                  >
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" onclick="toGame('JDB')">
+                <div class="dz-list-img">
+                  <img
+                    src="images/dz04.png"
+                  /><span></span>
+                </div>
+                <div class="dz-list-tt">
+                  <img
+                    src="images/dz-logo04.png"
+                  />JDB电子
+                </div>
+                <div>
+                  <span class="dz-list-b"
+                    >超级彩池<b>CNY</b
+                    ><font id="caichi4">3,578,047,960</font></span
+                  >
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div id="slotgame" data-v-app="">
+            <div class="slots-tab">
+              <ul class="game-list">
+                <li data-url="NPG" class="on active hot">
+                  <span>
+                    <img
+                      src="images/g-pgdz.png"
+                      class="img"
+                    />
+                    <p>PG电子<span>PG GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="MG" class="hot on">
+                  <span>
+                    <img
+                      src="images/g-mg.png"
+                      class="img"
+                    />
+                    <p>MG电子<span>MG GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="BBIN" class="hot">
+                  <span>
+                    <img
+                      src="images/g-bbin.png"
+                      class="img"
+                    />
+                    <p>BBIN电子<span>BBIN GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="CQ9" class="hot">
+                  <span>
+                    <img
+                      src="images/g-cq9.png"
+                      class="img"
+                    />
+                    <p>传奇电子<span>CQ9 GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="JDB" class="hot">
+                  <span>
+                    <img
+                      src="images/g-jdb.png"
+                      class="img"
+                    />
+                    <p>夺宝电子<span>JDB GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="AG" class="hot">
+                  <span>
+                    <img
+                      src="images/g-pa.png"
+                      class="img"
+                    />
+                    <p>PA电子<span>PLAYACE</span></p>
+                  </span>
+                </li>
+                <li data-url="AE" class="">
+                  <span>
+                    <img
+                      src="images/g-ae.png"
+                      class="img"
+                    />
+                    <p>AE阿米巴电子<span>AE GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="PS" class="">
+                  <span>
+                    <img
+                      src="images/g-ps.png"
+                      class="img"
+                    />
+                    <p>PS玩星电子<span>PS GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="DT" class="">
+                  <span>
+                    <img
+                      src="images/g-dt.png"
+                      class="img"
+                    />
+                    <p>DT电子<span>DT GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="QT" class="">
+                  <span>
+                    <img
+                      src="images/g-qt.png"
+                      class="img"
+                    />
+                    <p>QT电子<span>QT GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="FG" class="">
+                  <span>
+                    <img
+                      src="images/g-fg.png"
+                      class="img"
+                    />
+                    <p>FG电子<span>FG GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="HB" class="">
+                  <span>
+                    <img
+                      src="images/g-hb.png"
+                      class="img"
+                    />
+                    <p>HB电子<span>HB GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="LY" class="hot">
+                  <span>
+                    <img
+                      src="images/g-leg.png"
+                      class="img"
+                    />
+                    <p>LEG棋牌<span>LEG CARD</span></p>
+                  </span>
+                </li>
+                <li data-url="SG" class="">
+                  <span>
+                    <img
+                      src="images/g-sg.png"
+                      class="img"
+                    />
+                    <p>SG新霸电子<span>SPADEGAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="DS" class="">
+                  <span>
+                    <img
+                      src="images/g-ds.png"
+                      class="img"
+                    />
+                    <p>DS电子<span>DS GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="FC" class="">
+                  <span>
+                    <img
+                      src="images/g-fc.png"
+                      class="img"
+                    />
+                    <p>FC电子<span>FC GAMING</span></p>
+                  </span>
+                </li>
+                <li data-url="PP" class="">
+                  <span>
+                    <img
+                      src="images/g-pp.png"
+                      class="img"
+                    />
+                    <p>PP电子<span>PP GAMING</span></p>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/header.js"></script>
+    <script>
+      $("#header").load("header.html", function () {
+        initHeader();
+      });
+      $("#footer").load("footer.html");
+
+      $(function () {
+        $("ul li:nth-child(2)").addClass("on");
+        $("#slotgame > div:nth-child(1) > ul").addClass("game-list");
+        $(".cgslot-nav").attr("class", "slots-tab");
+      });
+    </script>
+  </body>
+</html>

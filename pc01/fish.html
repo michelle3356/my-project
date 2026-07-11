@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>捕鱼</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <style>
+      .over-box {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .tab-content .tab-pane {
+        display: none;
+      }
+
+      .tab-content .tab-pane.active {
+        display: block;
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transition: 0.5s all;
+      }
+
+      .by-back {
+        background-size: cover;
+        height: 790px;
+      }
+
+      #by01 .by-back,
+      #by07 .by-back,
+      #by13 .by-back {
+        background: url("images/fish/fish_bg01.png") center top / cover
+          no-repeat;
+      }
+
+      #by02 .by-back,
+      #by08 .by-back,
+      #by14 .by-back {
+        background: url("images/fish/fish_bg02.png") center top / cover
+          no-repeat;
+      }
+
+      #by03 .by-back,
+      #by09 .by-back,
+      #by15 .by-back {
+        background: url("images/fish/fish_bg03.png") center top / cover
+          no-repeat;
+      }
+
+      #by04 .by-back,
+      #by10 .by-back {
+        background: url("images/fish/fish_bg04.png") center top / cover
+          no-repeat;
+      }
+
+      #by05 .by-back,
+      #by11 .by-back {
+        background: url("images/fish/fish_bg05.png") center top / cover
+          no-repeat;
+      }
+
+      #by06 .by-back,
+      #by12 .by-back {
+        background: url("images/fish/fish_bg06.png") center top / cover
+          no-repeat;
+      }
+
+      .by-back .container {
+        width: 1200px;
+        margin: auto;
+        position: relative;
+      }
+
+      .by-title {
+        font-size: 47px;
+        color: #fff;
+        padding-top: 80px;
+        font-weight: bold;
+        text-shadow: 5px 0 3px rgba(0, 118, 133, 0.76);
+      }
+
+      .by-p {
+        text-shadow: 2px 0 2px rgba(0, 118, 133, 0.76);
+        width: 450px;
+        color: #fff;
+        font-size: 22px;
+        margin-top: 20px;
+        line-height: 35px;
+        text-align: justify;
+      }
+
+      .by-goGame-btn {
+        display: block;
+        width: 200px;
+        padding: 10px 20px;
+        margin-top: 15px;
+        font-size: 25px;
+        color: #fff;
+        border-radius: 30px;
+        text-align: center;
+        background-image: linear-gradient(0deg, #f83600 0, #f9d423);
+        cursor: pointer;
+      }
+
+      .active .by-img {
+        animation: rightIn 0.5s ease-in-out;
+      }
+
+      .by-img {
+        position: absolute;
+        top: 80px;
+        right: 15px;
+      }
+
+      .by-bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        bottom: 80px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 10px 0;
+      }
+
+      .by-tabs {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .by-tabs li {
+        margin: 0 10px 10px 0;
+        list-style: none;
+      }
+
+      .by-tabs li a {
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .by-tabs li a img {
+        height: 65px;
+      }
+
+      .by-bottom-item {
+        width: 100px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(60, 60, 60, 0.3);
+      }
+
+      .by-tabs li.active a .by-tabs-bottom,
+      .by-tabs li a:hover .by-tabs-bottom {
+        background: #d66d00;
+        color: #fff600;
+      }
+
+      .by-tabs-bottom {
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+        background: rgba(0, 59, 91, 0.74);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div class="over-box">
+      <div class="tab-content by-content">
+        <div role="tabpanel" class="tab-pane active" id="by01">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">CQ9捕鱼</div>
+              <div class="by-p">
+                游戏游戏画面精美可爱背景音乐非常的舒缓，喜欢捕鱼游戏的玩家快来体验捕鱼的快感吧!
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img01.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by02">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">JDB捕鱼</div>
+              <div class="by-p">
+                蕴藏在深海中的传说宝藏与龙珠，在龙宫仙女、金龙、海洋生物的守护下，等待各位来猎取!
+                召集您好友快点加入，实现您一夜致富的梦想。
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img02.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by03">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">乐游捕鱼</div>
+              <div class="by-p">
+                炫酷特效搭配强力武器，开启畅爽捕鱼之旅！无需复杂操作，新手也能轻松上手，捕获大鱼、赢取高额奖励！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img04.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by04">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">天游捕鱼</div>
+              <div class="by-p">
+                沉浸式海底世界，丰富鱼种任你捕捉。紧张刺激与轻松娱乐并存，让你在游戏中尽享捕鱼快感！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img05.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by05">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">WG捕鱼</div>
+              <div class="by-p">
+                多人竞技、比拼技巧！自动开炮系统轻松解放双手，爆金时刻不容错过，快来体验指尖上的刺激渔场！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img01.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by06">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">瓦力捕鱼</div>
+              <div class="by-p">
+                玩法多样，奖励丰富，打造专属你的捕鱼风格。高爆率、高回报，尽享每一次捕获的惊喜和成就感！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img02.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by07">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">RSG捕鱼</div>
+              <div class="by-p">
+                画面细腻动感十足，背景音乐轻松舒缓。无论是放松解压还是挑战极限，捕鱼游戏都能带来满满乐趣！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img04.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by08">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">BG捕鱼</div>
+              <div class="by-p">
+                丰富关卡与神秘Boss等你挑战，捕鱼不再单调！一炮双鱼、全屏爆金，体验满屏金币飞舞的快感！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img05.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by09">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">AG捕鱼</div>
+              <div class="by-p">
+                超真实海底场景，带你畅游奇幻渔场。操作简单易上手，金币、道具奖励不停，乐趣一网打尽！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img01.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="by10">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">VG捕鱼</div>
+              <div class="by-p">
+                考验玩家的运气之余，更讲求超凡技巧，便利的自动捕鱼加上特殊武器，花式捕鱼爽快爆金。谁能以渐少子弹捕获得渐多高价大鱼，变成达人称雄霸榜呢？
+                ！超乎你的想象。
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img02.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by11">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">开元捕鱼</div>
+              <div class="by-p">
+                玩法非常的简单易懂，提供高品质的游戏画面及动画呈现，让游戏变得更有趣及更有挑战性，能够有效增加玩家停留在游戏上的时间。
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img04.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by12">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">百胜捕鱼</div>
+              <div class="by-p">
+                每日上线送福利，金币、炮弹拿到手软！挑战高倍鱼王，轻松实现金币翻倍，捕鱼变身赚钱利器！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img05.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by13">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">FC捕鱼</div>
+              <div class="by-p">
+                海量炮台随意切换，锁定目标一击必中！从休闲娱乐到竞技对战，满足不同玩家的捕鱼乐趣！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img01.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by14">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">YL捕鱼</div>
+              <div class="by-p">
+                登录即送金币，轻松开启捕鱼冒险。挑战限时活动，赢取稀有道具，畅享丰富玩法与豪华奖赏！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img02.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="by15">
+          <div class="by-back">
+            <div class="container">
+              <div class="by-title">FG</div>
+              <div class="by-p">
+                全新鱼种震撼登场，捕获越多奖励越高！无门槛畅玩，每一发炮弹都可能带来超值惊喜！
+              </div>
+              <a href="javascript:void(0)" class="by-goGame-btn">立即游戏</a>
+              <div class="by-img">
+                <img src="images/fish/by-img04.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="by-bottom">
+        <div class="container">
+          <ul class="by-tabs clearfix text-center">
+            <li class="active">
+              <a href="javascript:void(0)" data-by="#by01">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_cq9.png" />
+                </div>
+                <div class="by-tabs-bottom">CQ9捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by02">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_jdb.png" />
+                </div>
+                <div class="by-tabs-bottom">JDB捕鱼</div>
+              </a>
+            </li>
+            <li class="on">
+              <a href="javascript:void(0)" data-by="#by03">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_ly.png" />
+                </div>
+                <div class="by-tabs-bottom">乐游捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by04">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_ty.png" />
+                </div>
+                <div class="by-tabs-bottom">天游捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by05">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_wg.png" />
+                </div>
+                <div class="by-tabs-bottom">WG捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by06">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_wl.png" />
+                </div>
+                <div class="by-tabs-bottom">瓦力捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by07">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_rsg.png" />
+                </div>
+                <div class="by-tabs-bottom">RSG捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by08">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_bg.png" />
+                </div>
+                <div class="by-tabs-bottom">BG捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by09">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_ag.png" />
+                </div>
+                <div class="by-tabs-bottom">AG捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by10">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_vg.png" />
+                </div>
+                <div class="by-tabs-bottom">VG捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by11">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_ky.png" />
+                </div>
+                <div class="by-tabs-bottom">开元捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by12">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_bz.png" />
+                </div>
+                <div class="by-tabs-bottom">百胜捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by13">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_fc.png" />
+                </div>
+                <div class="by-tabs-bottom">FC捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by14">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_yl.png" />
+                </div>
+                <div class="by-tabs-bottom">YL捕鱼</div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" data-by="#by15">
+                <div class="by-bottom-item">
+                  <img src="images/pcTripartiteLogo/logo_fg.png" />
+                </div>
+                <div class="by-tabs-bottom">FG捕鱼</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+      $("#header").load("header.html", function () {
+        activateNavHighlight();
+      });
+      $("#footer").load("footer.html");
+
+      $(document).ready(() => {
+        $(".by-tabs li").on("click", function () {
+          const $this = $(this);
+          const targetId = $this.find("a").data("by");
+          $this.addClass("active").siblings().removeClass("active");
+          $(".tab-pane").removeClass("active");
+          $(targetId).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

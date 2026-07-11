@@ -1,0 +1,909 @@
+<style>
+  #footernew {
+    background-color: #414755;
+    color: #878ea6;
+  }
+
+  #footernew .wrapper {
+    width: 1300px;
+  }
+
+  .wrapper {
+    position: relative;
+    width: 1300px;
+    margin: 0 auto;
+  }
+
+  .footernew-logo {
+    position: relative;
+    display: block;
+    padding: 15px;
+    text-align: right;
+    font-size: 0;
+    width: 87%;
+  }
+
+  .footernew-logo li {
+    display: inline-block;
+    vertical-align: top;
+    height: 35px;
+    margin: 0 6px;
+    background: url(images/footerImg.png)
+      no-repeat;
+    background-position-y: -1px;
+    transition: all 0.4s ease;
+  }
+
+  .footernew-logo li[data-img="01"] {
+    width: 70px;
+    background-position-x: -4px;
+  }
+
+  .footernew-logo li[data-img="02"] {
+    width: 35px;
+    background-position-x: -90px;
+  }
+
+  .footernew-logo li[data-img="03"] {
+    width: 50px;
+    background-position-x: -143px;
+  }
+
+  .footernew-logo li[data-img="04"] {
+    width: 60px;
+    background-position-x: -210px;
+  }
+
+  .footernew-logo li[data-img="05"] {
+    width: 45px;
+    background-position-x: -280px;
+  }
+
+  .footernew-logo li[data-img="06"] {
+    width: 65px;
+    background-position-x: -338px;
+  }
+
+  .footernew-logo li[data-img="07"] {
+    width: 45px;
+    background-position-x: -418px;
+  }
+
+  .footernew-logo li[data-img="08"] {
+    width: 75px;
+    background-position-x: -478px;
+  }
+
+  .footernew-logo li[data-img="09"] {
+    width: 125px;
+    background-position-x: -571px;
+  }
+
+  .footernew-logo li[data-img="10"] {
+    width: 90px;
+    background-position-x: -700px;
+  }
+
+  .footer-logo li[data-img="11"] {
+    width: 30px;
+    background-position-x: -806px;
+  }
+
+  .footernew-logo li[data-img="12"] {
+    width: 50px;
+    background-position-x: -854px;
+  }
+
+  .footernew-logo li[data-img="13"] {
+    width: 85px;
+    background-position-x: -925px;
+    margin-right: 0;
+  }
+
+  .footernew-logo > li:hover {
+    background-position-y: -36px;
+  }
+
+  .footernew-text {
+    position: relative;
+    margin: 0;
+    padding: 30px 130px;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .footernew-info {
+    display: block;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+  }
+
+  .footernew-info > li:before {
+    content: "";
+    display: block;
+    height: 45px;
+    margin: 0 auto 10px;
+    transition: all 0.4s ease;
+    background: url(images/license.png)
+      no-repeat;
+    background-position-y: -1px;
+  }
+
+  .footernew-info > li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    font-size: 14px;
+    text-align: center;
+    transition: color 0.4s ease;
+  }
+
+  .footernew-info > li:hover:before {
+    background-position-y: -51px;
+  }
+
+  .footernew-info > li[data-img="06"]:before {
+    width: 45px;
+    background-position-x: -738px;
+  }
+
+  .footernew-info > li[data-img="01"]:before {
+    width: 200px;
+    background-position-x: 0;
+  }
+
+  .footernew-info > li[data-img="02"]:before {
+    width: 150px;
+    background-position-x: -200px;
+  }
+
+  .footernew-info > li[data-img="03"]:before {
+    width: 200px;
+    background-position-x: -352px;
+  }
+
+  .footernew-info > li[data-img="04"]:before {
+    width: 45px;
+    background-position-x: -550px;
+  }
+
+  .footernew-info > li[data-img="05"]:before {
+    width: 140px;
+    background-position-x: -595px;
+  }
+
+  .footernew-nav {
+    display: block;
+    padding: 20px 0 0;
+    font-size: 0;
+    text-align: center;
+  }
+
+  .footernew-nav li {
+    display: inline-block;
+    color: #c0c4d0;
+    font-size: 14px;
+  }
+
+  .footernew-nav a {
+    padding: 0 15px;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  #footernew-suggest {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #7c8797;
+  }
+
+  /*-----浮窗----------*/
+
+  #cssmenu {
+    position: fixed;
+    padding: 0;
+    margin-top: 41px;
+    border: 0;
+    right: 0;
+    top: 125px;
+    z-index: 199;
+  }
+
+  #cssmenu ul,
+  #cssmenu li {
+    list-style: none;
+  }
+
+  .cssmenu-menu {
+    position: relative;
+  }
+
+  .cssmenu-menu.active {
+  }
+
+  .cssmenu-menu-item {
+    display: block;
+    width: 74px;
+    height: 74px;
+  }
+
+  .cssmenu-list {
+    display: none;
+    width: 175px;
+    position: absolute;
+    top: 0;
+    right: 74px;
+    z-index: 9;
+  }
+
+  .cssmenu-menu:hover .cssmenu-list {
+    display: block;
+  }
+
+  #cssmenu ul ul:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 32px;
+    right: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #007dcb;
+    background: none;
+    overflow: visible;
+  }
+
+  .cssmenu-list li {
+    background-color: #fff;
+    border-left: 1px solid #007dcb;
+    border-right: 1px solid #007dcb;
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+    padding-left: 1.4em;
+  }
+
+  .cssmenu-list li:first-child {
+    border-top: 1px solid #007dcb;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .cssmenu-list li:last-child {
+    border-bottom: 1px solid #007dcb;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .cssmenu-list li + li:before {
+    content: " ";
+    display: block;
+    background: #dcdcdc;
+    height: 1px;
+    margin-left: 12px;
+    margin-right: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .cssmenu-item {
+    position: relative;
+  }
+
+  .cssmenu-item a {
+    text-decoration: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .cssmenu-item .cssmenu-icon {
+    margin-right: 1em;
+  }
+
+  .cssmenu-item span {
+    display: block;
+    line-height: 1.8em;
+    font-family: "STHeiti", "microsoft yahei";
+  }
+
+  .cssmenu-item span b {
+    display: block;
+    font-weight: bold;
+    color: #004763;
+    font-size: 14px;
+  }
+
+  .cssmenu-item span em {
+    display: block;
+    font-style: normal;
+    color: #007dcb;
+    font-size: 10px;
+  }
+
+  .cssmenu-item:hover {
+    background: -webkit-linear-gradient(#e5dea9, #d8b047);
+    background: -o-linear-gradient(#e5dea9, #d8b047);
+    background: -moz-linear-gradient(#e5dea9, #d8b047);
+    background: linear-gradient(#e5dea9, #d8b047);
+  }
+
+  .cssmenu-item:hover span {
+  }
+
+  .cssmenu-item:hover span b {
+    color: #fff;
+  }
+
+  .cssmenu-item:hover span em {
+    color: #e1ff00;
+    font-weight: bold;
+  }
+
+  .cssmenu-qrcode {
+    display: none;
+    padding: 0 8px 0 0;
+    position: absolute;
+    top: 0;
+    right: 175px;
+  }
+
+  .cssmenu-qrcode:before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 32px;
+    right: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #02b8fd;
+    background: none;
+    overflow: visible;
+  }
+
+  .cssmenu-item:hover .cssmenu-qrcode {
+    display: block;
+  }
+
+  .cssmenu-qrcode li {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .cssmenu-qrcode img {
+    max-width: 119px;
+    max-height: 119px;
+    width: 119px;
+    height: 119px;
+    border-radius: 5px;
+    border: 2px solid #02b8fd;
+    overflow: hidden;
+  }
+
+  .cssmenu-menu i {
+    display: block;
+  }
+
+  .cssmenu-menu-icon {
+    width: 74px;
+    height: 74px;
+  }
+
+  .cssmenu-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .menu-item01 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu1hover.png")
+      center no-repeat;
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu1.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon01-01 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/I02.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon01-02 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/I04.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon01-03 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/I06.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon01-04 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I08.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon01-05 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/d1.gif")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon01-06 {
+    background: url("..images/chats/06.png") center no-repeat;
+    background-size: contain;
+  }
+
+  .menu-item02 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu2.png")
+      center no-repeat;
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu2hover.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon02-01 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I08.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon02-02 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I10.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon02-03 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I12.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon02-04 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I14.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon02-05 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I16.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon02-06 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I18.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon02-07 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I20.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .menu-item03 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu3.png")
+      center no-repeat;
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu3hover.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon03-01 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I22.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon03-02 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I24.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon03-03 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I26.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon03-04 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I28.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .menu-item04 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu4hover.png")
+      center no-repeat;
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu4.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .menu-item06 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/menu6.png")
+      center no-repeat;
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/menu6.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-menu-item:hover .menu-item06,
+  .menu-item06hover {
+    -webkit-filter: contrast(1.4);
+    -moz-filter: contrast(1.4);
+    -ms-filter: contrast(1.4);
+    -o-filter: contrast(1.4);
+    filter: contrast(1.4);
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/menu61.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon04-01 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I30.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon04-02 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I32.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .icon04-03 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I20.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-menu-item:hover .menu-item01,
+  .menu-item01hover {
+    -webkit-filter: contrast(1.4);
+    -moz-filter: contrast(1.4);
+    -ms-filter: contrast(1.4);
+    -o-filter: contrast(1.4);
+    filter: contrast(1.4);
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu1hover.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon01-01 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/I02hover.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon01-02 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/I04hover.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon01-03 {
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/I06hover.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon01-04 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I07.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon01-05 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/d1hover.gif")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon01-06 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/h06.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-menu-item:hover .menu-item02,
+  .menu-item02hover {
+    -webkit-filter: contrast(1.4);
+    -moz-filter: contrast(1.4);
+    -ms-filter: contrast(1.4);
+    -o-filter: contrast(1.4);
+    filter: contrast(1.4);
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu2.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon02-01 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I07.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon02-02 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I09.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon02-03 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I11.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon02-04 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I13.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon02-05 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I15.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon02-06 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I17.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon02-07 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I19.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-menu-item:hover .menu-item03,
+  .menu-item03hover {
+    -webkit-filter: contrast(1.4);
+    -moz-filter: contrast(1.4);
+    -ms-filter: contrast(1.4);
+    -o-filter: contrast(1.4);
+    filter: contrast(1.4);
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu3.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon03-01 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I21.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon03-02 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I23.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon03-03 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I25.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon03-04 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I27.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-menu-item:hover .menu-item04,
+  .menu-item04hover {
+    -webkit-filter: contrast(1.4);
+    -moz-filter: contrast(1.4);
+    -ms-filter: contrast(1.4);
+    -o-filter: contrast(1.4);
+    filter: contrast(1.4);
+    background: url("https://lb-h7jqakhn-iw10qn3drm2sgzof.clb.kr-tencentclb.cloud:11451/cl/tpl/wacimages/chats/menu4hover.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon04-01 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I30hover.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon04-02 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I31.png")
+      center no-repeat;
+    background-size: contain;
+  }
+
+  .cssmenu-item:hover .icon04-03 {
+    background: url("https://static.fufuedu.com/1/cl/tpl/aomenjinshaimages/chats/I19.png")
+      center no-repeat;
+    background-size: contain;
+  }
+</style>
+
+<footer id="footernew" style="position: relative">
+  <div class="wrapper">
+    <ul class="footernew-logo">
+      <li data-img="01"></li>
+      <li data-img="02"></li>
+      <li data-img="03"></li>
+      <li data-img="04"></li>
+      <li data-img="05"></li>
+      <li data-img="06"></li>
+      <li data-img="07"></li>
+      <li data-img="08"></li>
+      <li data-img="09"></li>
+      <li data-img="10"></li>
+      <li data-img="11"></li>
+      <li data-img="12"></li>
+      <li data-img="13"></li>
+    </ul>
+    <div class="footernew-text">
+      <span>澳门威尼斯人</span
+      >拥有欧洲马耳他管理局（MGA）、英国GC监督委员会（Gambling
+      Commission）和菲律宾政府竞猜委员会 （PAGCOR）颁发的合法执照。
+      注册于英属维尔京群岛，是受国际协会认可的合法公司。进行注册并娱乐前，请确保您年满18周岁！
+    </div>
+    <ul class="footernew-info">
+      <li data-img="06">澳门特别行政区政府网投牌照</li>
+      <li data-img="01">马耳他博彩牌照（MGA）认证</li>
+      <li data-img="02">英国GC监督委员会</li>
+      <li data-img="03">英属维尔京群岛（BVI）认证</li>
+      <li data-img="04">GamCare官方安全赌博标准</li>
+      <li data-img="05">菲律宾（PAGCOR）监督竞猜牌照</li>
+    </ul>
+    <ul class="footernew-nav">
+      <li>
+        <a
+          href="javascript:void(0)"
+          onclick="toPage('PageOther','&amp;PageType=About')"
+          >关于我们</a
+        >
+      </li>
+      <li>
+        <a
+          href="javascript:void(0)"
+          onclick="toPage('PageOther','&amp;PageType=Contact')"
+          >联系我们</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)"
+          >代理加盟</a
+        >
+      </li>
+      <li>
+        <a
+          href="javascript:void(0)"
+          onclick="toPage('PageOther','&amp;PageType=Deposit')"
+          >存款帮助</a
+        >
+      </li>
+      <li>
+        <a
+          href="javascript:void(0)"
+          onclick="toPage('PageOther','&amp;PageType=Teller')"
+          >取款帮助</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)"
+          >常见问题</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)"
+          >合作伙伴</a
+        >
+      </li>
+    </ul>
+  </div>
+  <p id="footernew-suggest">版权所有 ©威尼斯人 保留所有权</p>
+</footer>
+
+<div id="cssmenu">
+  <ul>
+    <li class="cssmenu-menu active">
+      <a id="menu-item01" class="cssmenu-menu-item" href="javascript:void(0);">
+        <i class="cssmenu-menu-icon menu-item01"></i>
+      </a>
+      <ul class="cssmenu-list">
+        <li class="cssmenu-item">
+          <a href="https://zqge7s6gyx.61307.pink/chatlink.html" target="_blank">
+            <i class="cssmenu-icon icon01-01"></i>
+            <span>
+              <b>7x24小时<br />在线客服①</b>
+            </span>
+          </a>
+        </li>
+        <li class="cssmenu-item">
+          <a
+            href="https://chat888.admin2939service.com/0zgv9ma47okho1kbw9u2paguy4"
+            target="_blank"
+          >
+            <i class="cssmenu-icon icon01-01"></i>
+            <span>
+              <b>7x24小时<br />在线客服②</b>
+            </span>
+          </a>
+        </li>
+
+        <li class="cssmenu-item">
+          <a href="javascript:void(0);">
+            <i class="cssmenu-icon icon01-02"></i>
+            <span>
+              <b>国际热线</b>
+              <em>+63 9516977777</em>
+            </span>
+          </a>
+        </li>
+        <li class="cssmenu-item">
+          <a href="javascript:void(0);">
+            <i class="cssmenu-icon icon01-03"></i>
+            <span>
+              <b>客服邮箱</b>
+              <em>2939kf@gmail.com</em>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="cssmenu-menu">
+      <a
+        id="menu-item02"
+        class="cssmenu-menu-item"
+        href="javascript:void(0);"
+        onclick="toPage('PageActivity');"
+      >
+        <i class="cssmenu-menu-icon menu-item02"></i>
+      </a>
+    </li>
+
+    <li class="cssmenu-menu">
+      <a
+        id="menu-item03"
+        class="cssmenu-menu-item"
+        href="javascript:void(0);"
+        onclick="javascript: toPage('PageCooperation');"
+      >
+        <i class="cssmenu-menu-icon menu-item03"></i>
+      </a>
+    </li>
+
+    <li class="cssmenu-menu">
+      <a
+        id="menu-item04"
+        class="cssmenu-menu-item"
+        target="_blank"
+        href="https://usijdn.qymff.cn/4rpcqbz7"
+      >
+        <i class="cssmenu-menu-icon menu-item04"></i>
+      </a>
+    </li>
+  </ul>
+</div>

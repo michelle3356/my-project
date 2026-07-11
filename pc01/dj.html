@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>电竞</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <style>
+      .esport {
+        width: 100%;
+        min-height: 90vh;
+        background-color: #07010b;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+      }
+
+      .esport-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .esport-content-wrap {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .esport-content-wrap li {
+        width: 300px;
+        height: 280px;
+        border: 2px solid #383d5e;
+        text-align: center;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        position: relative;
+      }
+
+      .esport-content-wrap li .list-name {
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .esport-content-wrap li:hover {
+        border: 2px solid #faae30;
+      }
+
+      .esport-content-wrap li:hover .list .btn,
+      .esport-content-wrap li:hover .list > .title-5_1fc {
+        opacity: 1;
+      }
+
+      .esport-content-wrap li .list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .esport-content-wrap li .list > img {
+        width: 280px;
+        height: 220px;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+
+      .esport-content-wrap li .list .btn {
+        background: url("images/game-hover.png") no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        transition: all 0.4s;
+        background-size: cover;
+        -moz-opacity: 0;
+        opacity: 0;
+      }
+
+      .esport-content-wrap li .list .btn-game {
+        display: block;
+        text-align: center;
+        padding: 8px 20px;
+        color: #fff;
+        background: #f39800;
+        margin: 0 auto;
+        font-size: 14px;
+        border-radius: 3px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .esport-content-wrap li .list .btn-game:hover {
+        cursor: pointer;
+        background: #09f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div
+      class="esport"
+      style="background-image: url('images/sport/esport_bg.png')"
+    >
+      <div class="esport-content">
+        <ul class="esport-content-wrap">
+          <li>
+            <div class="list">
+              <img src="images/sport/esport_01.png" />
+              <p class="list-name">雷火电竞</p>
+              <div class="btn">
+                <a class="btn-game" href="javascript:void(0)">进入游戏</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="list">
+              <img src="images/sport/esport_02.png" />
+              <p class="list-name">DB电竞</p>
+              <div class="btn">
+                <a class="btn-game" href="javascript:void(0)">进入游戏</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+      $("#header").load("header.html", function () {
+        activateNavHighlight();
+      });
+      $("#footer").load("footer.html");
+    </script>
+  </body>
+</html>

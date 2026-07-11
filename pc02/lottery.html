@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/iife.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jsencrypt.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/countUp.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/common_wac.js"></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/wac_style_v2.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="over-box">
+      <div class="container kz-box">
+        <ul class="game-tabs clearfix text-center">
+          <li class="active">
+            <a
+              href="#home01cp"
+              aria-controls="home01cp"
+              role="tab"
+              data-toggle="tab"
+            >
+              <div class="tabs-slick-img">
+                <p>
+                  <span
+                    ><img
+                      src="images/dzlogo2.png" /><img
+                      class="hover-img"
+                      src="images/dzlogo2on.png"
+                  /></span>
+                </p>
+              </div>
+              <div class="tabs-slick-p txt-elise">BBIN彩票</div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#home02cp"
+              aria-controls="home02cp"
+              role="tab"
+              data-toggle="tab"
+            >
+              <div class="tabs-slick-img">
+                <p>
+                  <span
+                    ><img
+                      src="images/cplogo3.png" /><img
+                      class="hover-img"
+                      src="images/cplogo3on.png"
+                  /></span>
+                </p>
+              </div>
+              <div class="tabs-slick-p txt-elise">VR彩票</div>
+            </a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="home01cp">
+            <div class="game-box">
+              <div class="game-btn">
+                <a href="javascript:void(0)" onclick="toGame('BBIN', 'CP');"
+                  >立即游戏</a
+                >
+              </div>
+              <div class="game-p"><i>BB Lotterv</i></div>
+              <div class="game-p-lg"><i>BBIN 彩票</i></div>
+              <div class="game-p-b">创新玩法<span>·</span>超高赔率</div>
+              <div class="game-p-txt">
+                超高赔率、快乐彩大小升跌指数，时时彩大小<br />
+                对吃，极速开彩结果，令您全身心的投入。
+              </div>
+            </div>
+            <div class="game-right">
+              <div class="mv-img" style="left: 212px; bottom: 162px">
+                <img
+                  src="images/cppic1.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="home02cp">
+            <div class="game-box">
+              <div class="game-btn">
+                <a href="javascript:void(0)" onclick="toGame('vr', 'vr');"
+                  >立即游戏</a
+                >
+              </div>
+              <div class="game-p"><i>VR Lotterv</i></div>
+              <div class="game-p-lg"><i>VR 彩票</i></div>
+              <div class="game-p-b">真人极速<span>·</span>真实可见</div>
+              <div class="game-p-txt">
+                美女直播开奖、一镜到底，身临其境般真实，<br />
+                立即感受激情时刻。
+              </div>
+            </div>
+            <div class="game-right">
+              <div class="mv-img" style="left: 355px; bottom: 89px">
+                <img
+                  src="images/cppic2.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="home03cp">
+            <div class="game-box">
+              <div class="game-btn">
+                <a href="javascript:void(0)" onclick="toGame('ncg', 'ncg');"
+                  >立即游戏</a
+                >
+              </div>
+              <div class="game-p"><i>CG Lotterv</i></div>
+              <div class="game-p-lg"><i>CG 彩票</i></div>
+              <div class="game-p-b">特殊玩法<span>·</span>量身打造</div>
+              <div class="game-p-txt">
+                官方玩法、娱乐城玩法量身打造，尽情体验开<br />
+                彩乐趣。
+              </div>
+            </div>
+            <div class="game-right">
+              <div class="mv-img" style="left: 212px; bottom: 30px">
+                <img
+                  src="images/cppic3.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="js/header.js"></script>
+    <script>
+      $("#header").load("header.html", function () {
+        initHeader();
+      });
+      $("#footer").load("footer.html");
+    </script>
+  </body>
+</html>

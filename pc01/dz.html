@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>电子</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
+    <style>
+      .dz-content-bg {
+        background: #202020;
+      }
+
+      .dz-wrap {
+        margin: 0 auto;
+        padding: 50px;
+      }
+
+      .dz-nav {
+        width: 1000px;
+        height: 80px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background: #000;
+        overflow: hidden;
+        padding: 0 30px;
+        box-sizing: border-box;
+      }
+
+      .dz-swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .dz-link {
+        display: block;
+        width: 145px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: #fff;
+        border-radius: 25px;
+        font-size: 16px;
+        color: #333;
+        transition: all 0.3s ease;
+      }
+
+      .dz-link:hover,
+      .dz-link.active {
+        background: #c49a6c;
+        color: #fff;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: #fff;
+        width: 15px;
+        height: 100%;
+        top: 0;
+        margin-top: 0;
+        z-index: 2;
+      }
+
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 25px;
+      }
+
+      .dz-game-section {
+        background: #202020;
+      }
+
+      .dz-game-grid {
+        width: 1000px;
+        margin: 0 auto;
+        padding-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background: #000;
+      }
+
+      .dz-game-item {
+        width: 175px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 30px;
+        text-align: center;
+        background: #181818;
+        color: #fff;
+      }
+
+      .dz-game-item .dz-game-icon {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+
+      .dz-game-item .dz-game-icon img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .dz-game-item .dz-game-title {
+        font-size: 14px;
+        color: #a9a8a8;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div class="dz-content-bg">
+      <div class="dz-wrap">
+        <div class="dz-nav">
+          <div class="swiper-button-prev dz-prev"></div>
+          <div class="dz-swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="dz-link active" href="javascript:void(0)"
+                  >PG电子(新)</a
+                >
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">MG电子(新)</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">WG电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">EG电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">RSG电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">BBIN电子(新)</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">PG电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">AG电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">PS电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">DT电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">DB电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">阿米巴电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">FTG电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">PP电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">FG电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">瓦力电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">JILI电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">AG_Yoplay(新)</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">GB电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">BTG电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">MW电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">AG_XIN(新)</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">AG娱乐城Yoplay</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">KA电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">JDB电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">CQ9电子</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">博乐老虎机</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">FC老虎机</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="dz-link" href="javascript:void(0)">YL电子</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next dz-next"></div>
+        </div>
+        <div class="dz-game-section">
+          <div class="dz-game-grid">
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5902.png" alt="" />
+              </a>
+              <div class="dz-game-title">糖果派对</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5030.png" alt="" />
+              </a>
+              <div class="dz-game-title">幸运财神</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5045.png" alt="" />
+              </a>
+              <div class="dz-game-title">森林舞会</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5058.png" alt="" />
+              </a>
+              <div class="dz-game-title">疯狂水果盘</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5067.png" alt="" />
+              </a>
+              <div class="dz-game-title">大话西游</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5076.png" alt="" />
+              </a>
+              <div class="dz-game-title">数字大转轮</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5079.png" alt="" />
+              </a>
+              <div class="dz-game-title">3D数字大转轮</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5094.png" alt="" />
+              </a>
+              <div class="dz-game-title">金瓶梅2</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5096.png" alt="" />
+              </a>
+              <div class="dz-game-title">五行</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5098.png" alt="" />
+              </a>
+              <div class="dz-game-title">五福临门</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5128.png" alt="" />
+              </a>
+              <div class="dz-game-title">多福多财</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5143.png" alt="" />
+              </a>
+              <div class="dz-game-title">糖果派对3</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5153.png" alt="" />
+              </a>
+              <div class="dz-game-title">九尾狐</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5166.png" alt="" />
+              </a>
+              <div class="dz-game-title">葫芦娃</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5171.png" alt="" />
+              </a>
+              <div class="dz-game-title">糖果派对</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5175.png" alt="" />
+              </a>
+              <div class="dz-game-title">满天星</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5182.png" alt="" />
+              </a>
+              <div class="dz-game-title">抖音DJ</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5184.png" alt="" />
+              </a>
+              <div class="dz-game-title">鱼跃龙门</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5185.png" alt="" />
+              </a>
+              <div class="dz-game-title">大丰收</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5191.png" alt="" />
+              </a>
+              <div class="dz-game-title">猪宝满满</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5198.png" alt="" />
+              </a>
+              <div class="dz-game-title">下龙湾神话</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5200.png" alt="" />
+              </a>
+              <div class="dz-game-title">鱼虾蟹开了</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5209.png" alt="" />
+              </a>
+              <div class="dz-game-title">草原拍拍</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5210.png" alt="" />
+              </a>
+              <div class="dz-game-title">糖果缤纷乐</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5601.png" alt="" />
+              </a>
+              <div class="dz-game-title">秘境冒险</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5823.png" alt="" />
+              </a>
+              <div class="dz-game-title">发大财</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5835.png" alt="" />
+              </a>
+              <div class="dz-game-title">喜福牛年</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5837.png" alt="" />
+              </a>
+              <div class="dz-game-title">喜福猴年</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5901.png" alt="" />
+              </a>
+              <div class="dz-game-title">连环夺宝</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5903.png" alt="" />
+              </a>
+              <div class="dz-game-title">秦皇秘宝</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5908.png" alt="" />
+              </a>
+              <div class="dz-game-title">糖果派对2</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5912.png" alt="" />
+              </a>
+              <div class="dz-game-title">连环夺宝2</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5216.png" alt="" />
+              </a>
+              <div class="dz-game-title">人鱼秘宝</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5220.png" alt="" />
+              </a>
+              <div class="dz-game-title">极乐盘丝洞</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5213.png" alt="" />
+              </a>
+              <div class="dz-game-title">富贵金蟾</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5222.png" alt="" />
+              </a>
+              <div class="dz-game-title">疯狂果酱罐</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5225.png" alt="" />
+              </a>
+              <div class="dz-game-title">火烧连环船</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5231.png" alt="" />
+              </a>
+              <div class="dz-game-title">聚宝消消乐</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5234.png" alt="" />
+              </a>
+              <div class="dz-game-title">超牛逼</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5242.png" alt="" />
+              </a>
+              <div class="dz-game-title">舞狮夺宝</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5243.png" alt="" />
+              </a>
+              <div class="dz-game-title">太有财</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5250.png" alt="" />
+              </a>
+              <div class="dz-game-title">采矿飞车</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5253.png" alt="" />
+              </a>
+              <div class="dz-game-title">爆发富</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5257.png" alt="" />
+              </a>
+              <div class="dz-game-title">叶问</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5259.png" alt="" />
+              </a>
+              <div class="dz-game-title">爆利金刚</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5261.png" alt="" />
+              </a>
+              <div class="dz-game-title">招财喵喵</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5246.png" alt="" />
+              </a>
+              <div class="dz-game-title">Go!Gdiv云</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5264.png" alt="" />
+              </a>
+              <div class="dz-game-title">金龙发发发</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5252.png" alt="" />
+              </a>
+              <div class="dz-game-title">矮精灵</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5267.png" alt="" />
+              </a>
+              <div class="dz-game-title">AV派对</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5247.png" alt="" />
+              </a>
+              <div class="dz-game-title">无限1024</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5256.png" alt="" />
+              </a>
+              <div class="dz-game-title">爆爆生财</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5311.png" alt="" />
+              </a>
+              <div class="dz-game-title">翻转神庙</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5251.png" alt="" />
+              </a>
+              <div class="dz-game-title">一杆清台</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5269.png" alt="" />
+              </a>
+              <div class="dz-game-title">大鹏展翅</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5268.png" alt="" />
+              </a>
+              <div class="dz-game-title">百搭双星</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5270.png" alt="" />
+              </a>
+              <div class="dz-game-title">Crash</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5275.png" alt="" />
+              </a>
+              <div class="dz-game-title">麻将胡了</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5272.png" alt="" />
+              </a>
+              <div class="dz-game-title">財犬</div>
+            </div>
+            <div class="dz-game-item">
+              <a href="javascript:void(0)" class="dz-game-icon">
+                <img src="images/bbin5/zh/bbslot_5274.png" alt="" />
+              </a>
+              <div class="dz-game-title">财富宙升</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+      $("#header").load("header.html", function () {
+        activateNavHighlight();
+      });
+      $("#footer").load("footer.html");
+
+      window.addEventListener("load", () => {
+        const dzSwiper = new Swiper(".dz-swiper", {
+          loop: true,
+          slidesPerView: 6,
+          slidesPerGroup: 6,
+          spaceBetween: 15,
+          speed: 1000,
+          navigation: {
+            nextEl: ".dz-next",
+            prevEl: ".dz-prev",
+          },
+        });
+
+        $(document).on("click", ".dz-link", function () {
+          $(".dz-link").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

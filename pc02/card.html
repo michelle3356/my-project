@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+		<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="js/iife.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/jsencrypt.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/slick.js"></script>
+		<script type="text/javascript" src="js/wow.min.js"></script>
+		<script type="text/javascript" src="js/countUp.js"></script>
+		<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+		<script type="text/javascript" src="js/common_wac.js"></script>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		<link href="css/bootstrap.css" rel="stylesheet" />
+		<link href="css/animate.min.css" rel="stylesheet" />
+		<link href="css/slick.css" rel="stylesheet" />
+		<link href="css/wac_style_v2.css" rel="stylesheet" />
+  </head>
+  <body>
+		<div id="header"></div>
+    <div class="over-box">
+      <div class="container kz-box">
+        <ul class="game-tabs clearfix text-center">
+          <li class="active">
+            <a
+              href="#home06"
+              aria-controls="home06"
+              role="tab"
+              data-toggle="tab"
+              aria-expanded="true"
+            >
+              <div class="tabs-slick-img">
+                <p>
+                  <span
+                    ><img
+                      src="images/ky01.png" /><img
+                      class="hover-img"
+                      src="images/ky02.png"
+                  /></span>
+                </p>
+              </div>
+              <div class="tabs-slick-p txt-elise">KY棋牌</div>
+            </a>
+          </li>
+          <li class="">
+            <a
+              href="#home07"
+              aria-controls="home07"
+              role="tab"
+              data-toggle="tab"
+              aria-expanded="false"
+            >
+              <div class="tabs-slick-img">
+                <p>
+                  <span
+                    ><img
+                      src="images/lylogo.png" /><img
+                      class="hover-img"
+                      src="images/lylogoon.png"
+                  /></span>
+                </p>
+              </div>
+              <div class="tabs-slick-p txt-elise">LY棋牌</div>
+            </a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="home06">
+            <div class="game-box">
+              <div class="game-btn">
+                <a href="javascript:void(0)" onclick="toGame('KY', 'KY');"
+                  >立即游戏</a
+                >
+              </div>
+              <div class="game-p"><i>KY Card</i></div>
+              <div class="game-p-lg"><i>KY 棋牌</i></div>
+              <div class="game-p-b">创新独特<span>·</span>玩法新颖</div>
+              <div class="game-p-txt">
+                娱乐休闲新玩法在线、十人对战血战到底、牛牛、<br />骰宝、龙虎斗，万人对战尽显刺激!
+              </div>
+            </div>
+            <div class="game-right ky-back">
+              <div class="mv-img" style="bottom: 100px">
+                <img
+                  src="images/ky-img.png"
+                />
+              </div>
+              <div class="img-r" style="top: 330px">
+                <img
+                  src="images/ky-right.png"
+                />
+              </div>
+              <div class="img-l" style="top: 110px">
+                <img
+                  src="images/ky-left.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="home07">
+            <div class="game-box">
+              <div class="game-btn">
+                <a href="javascript:void(0)" onclick="toGame('LY', 'LY');"
+                  >立即游戏</a
+                >
+              </div>
+              <div class="game-p"><i>LY Card</i></div>
+              <div class="game-p-lg"><i>LY 棋牌</i></div>
+              <div class="game-p-b">稳定的游戏<span>·</span>舒心的感受</div>
+              <div class="game-p-txt">
+                操作稳定流畅不卡顿、游戏不掉线，界面简洁清晰。<br />轻松上手、游戏多元，应有尽有。
+              </div>
+            </div>
+            <div class="game-right">
+              <div class="mv-img" style="bottom: 100px">
+                <img
+                  src="images/ly-img.png"
+                />
+              </div>
+              <div class="img-r" style="top: 235px">
+                <img
+                  src="images/ly-r.png"
+                />
+              </div>
+              <div class="img-l" style="top: 125px">
+                <img
+                  src="images/ly-l.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+		<div id="footer"></div>
+		<script src="js/header.js"></script>
+		<script>
+			$("#header").load("header.html", function () {
+				initHeader();
+			});
+      $("#footer").load("footer.html");
+		</script>
+  </body>
+</html>

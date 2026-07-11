@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
+    <style>
+      .notice-content {
+        width: 1200px;
+        height: 50px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      .notice-content img {
+        height: 25px;
+        margin-right: 5px;
+      }
+
+      /* 标题 */
+      .section-title {
+        width: 280px;
+        margin: 20px 0 10px;
+        display: flex;
+        align-items: center;
+        color: #666;
+      }
+
+      .section-title .line {
+        width: 4px;
+        height: 20px;
+        background-color: #c9a063;
+        margin-right: 10px;
+      }
+
+      .section-title .main {
+        font-weight: bold;
+        font-size: 18px;
+        color: #666;
+        margin-right: 10px;
+      }
+
+      .section-title .sub {
+        font-size: 16px;
+        color: #888;
+      }
+
+      /* 真人 */
+      .live-container {
+        width: 1200px;
+        margin: auto;
+      }
+
+      .live-items {
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+      }
+
+      .live-items-left {
+        width: 580px;
+        height: 460px;
+      }
+
+      .live-items-left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .live-items-right {
+        width: 610px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .small-img {
+        width: 300px;
+        height: 227px;
+      }
+
+      .small-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .banner-swiper {
+        width: 1200px;
+        height: 375px;
+      }
+
+      .live-swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        background: white;
+        opacity: 1;
+        margin: 0 5px;
+        border-radius: 50%;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #ffba07;
+      }
+
+      /* 热门游戏+中奖榜 */
+      .container2 {
+        width: 1200px;
+        margin: 10px auto;
+      }
+
+      .section-title-bar {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .game-section {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .popularGame {
+        display: flex;
+        gap: 10px;
+      }
+
+      .popularGame a {
+        display: block;
+        overflow: hidden;
+      }
+
+      .popularGame a .game-img {
+        transition: transform 0.3s ease;
+      }
+
+      .popularGame a:hover .game-img {
+        transform: scale(1.1);
+      }
+
+      .game-img.main-img {
+        width: 450px;
+        height: 330px;
+        object-fit: cover;
+      }
+
+      .game-img.small-img {
+        width: 220px;
+        height: 330px;
+        object-fit: cover;
+      }
+
+      .winner-board {
+        width: 280px;
+        height: 330px;
+        overflow: hidden;
+        border: 1px solid #eee;
+      }
+
+      .board-header {
+        position: relative;
+        z-index: 1;
+        background: #f9f9f9;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        color: #6c6c6c;
+        border-bottom: 1px solid #eee;
+      }
+
+      .board-header div,
+      .board-body .item div {
+        width: 30%;
+        text-align: center;
+      }
+
+      .board-body {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
+        animation: scrollList 20s linear infinite;
+      }
+
+      .board-body .item {
+        display: flex;
+        justify-content: space-between;
+        color: #6c6c6c;
+        font-size: 13px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+      }
+
+      @keyframes scrollList {
+        0% {
+          transform: translateY(0);
+        }
+
+        100% {
+          transform: translateY(-50%);
+        }
+      }
+
+      /* 三方游戏轮播切换 */
+      .game-swiper {
+        width: 1200px;
+        height: 120px;
+        margin: 20px auto;
+        position: relative;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+      }
+
+      .game-swiper .swiper-slide {
+        width: 25%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+      }
+
+      .game-card {
+        display: flex;
+        width: 240px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        background: #fff;
+      }
+
+      .game-card img {
+        width: auto;
+        height: 65px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .game-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .game-info .title {
+        font-size: 16px;
+        text-align: center;
+        color: #333;
+      }
+
+      .game-info .btn {
+        background-color: #c8a675;
+        color: white;
+        font-size: 14px;
+        padding: 2px 5px;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .game-prev,
+      .game-next {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        cursor: pointer;
+      }
+
+      .game-prev {
+        left: 10px;
+      }
+
+      .game-next {
+        right: 10px;
+      }
+
+      .game-prev::after,
+      .game-next::after {
+        font-size: 16px;
+        color: #fff;
+      }
+
+      /* 关於 */
+      .container3 {
+        width: 1200px;
+        margin: 10px auto;
+      }
+
+      .home-con-item-abous {
+        margin-top: 10px;
+        border: 1px solid #eaeaea;
+        padding: 30px 50px;
+      }
+
+      .home-con-item-abous > div:first-child {
+        display: flex;
+      }
+
+      .home-con-item-abous-txt1 {
+        font-size: 24px;
+        color: #6b471b;
+      }
+
+      .home-con-item-abous-txt2 {
+        line-height: 30px;
+        color: #6c6c6c;
+      }
+
+      .home-con-item-abous-bg {
+        width: 340px;
+        margin-left: 30px;
+      }
+
+      .home-con-item-abous-bg img {
+        width: 340px;
+      }
+
+      .home-con-item-hzhb {
+        width: 100%;
+        margin-top: 30px;
+        border-top: 1px dashed #eaeaea;
+      }
+
+      .home-con-item-hzhb img {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <div class="banner-wrap">
+      <div class="swiper banner-swiper">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            style="
+              background: url('images/pc_banner1.webp') center;
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+            "
+          ></div>
+          <div
+            class="swiper-slide"
+            style="
+              background: url('images/pc_banner2.webp') center;
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+            "
+          ></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="notice">
+      <div class="notice-content">
+        <img src="images/tip.png" />
+        <marquee
+          direction="left"
+          loop="-1"
+          scrollamount="3"
+          onMouseOut="this.start()"
+          onMouseOver="this.stop()"
+        >
+          滚动公告
+        </marquee>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="live-container">
+        <div class="section-title">
+          <div class="line"></div>
+          <div class="main">真人娱乐</div>
+          <div class="sub">全球顶级真人娱乐平台</div>
+        </div>
+        <div class="live-items">
+          <div class="live-items-left">
+            <div class="swiper live-swiper">
+              <div class="swiper-wrapper">
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_ag.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_bbin.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_bg.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_db.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_og.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_pp.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_sexy.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_wl.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_ab.png" alt="" />
+                </a>
+                <a href="javascript:void(0)" class="swiper-slide">
+                  <img src="images/live/live_we.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="live-items-right">
+            <a href="javascript:void(0)" class="swiper-slide small-img">
+              <img src="images/live/live_ag.png" alt="" />
+            </a>
+            <a href="javascript:void(0)" class="swiper-slide small-img">
+              <img src="images/live/live_bbin.png" alt="" />
+            </a>
+            <a href="javascript:void(0)" class="swiper-slide small-img">
+              <img src="images/live/live_bg.png" alt="" />
+            </a>
+            <a href="javascript:void(0)" class="swiper-slide small-img">
+              <img src="images/live/live_og.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="section-title-bar">
+          <div class="section-title">
+            <div class="line"></div>
+            <div class="main">热门游戏</div>
+            <div class="sub">多款游戏高额奖金</div>
+          </div>
+          <div class="section-title">
+            <div class="line"></div>
+            <div class="main">中奖瞬间</div>
+            <div class="sub">惊喜连连 好运连连</div>
+          </div>
+        </div>
+
+        <div class="game-section">
+          <div class="popularGame">
+            <a href="fish.html">
+              <img src="images/index_fish.jpg" class="game-img main-img" />
+            </a>
+            <a href="card.html">
+              <img src="images/index_card.png" class="game-img small-img" />
+            </a>
+            <a href="javascript:void(0)">
+              <img src="images/index_lottery.png" class="game-img small-img" />
+            </a>
+          </div>
+          <div class="winner-board">
+            <div class="board-header">
+              <div>游戏名称</div>
+              <div>账号</div>
+              <div>中奖金额</div>
+            </div>
+            <div class="board-body" id="winnerList"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper game-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_cq9.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">CQ9捕鱼</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_jdb.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">JDB捕鱼</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_ly.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">乐游捕鱼</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_bg.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">BG捕鱼</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_ky.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">开元捕鱼</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_pg.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">PG电子</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_jdb.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">JDB电子</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_cq9.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">CQ9电子</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_bb.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">BBIN电子</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_mg.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">MG电子</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_ky.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">开元棋牌</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_ly.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">乐游棋牌</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_fg.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">FG棋牌</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_bz.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">百胜棋牌</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_bb.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">BBIN体育</div>
+                <a href="javascript:void(0)" ?>" class="btn" >进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_ky.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">开元体育</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_pd.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">熊猫体育</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_cmd.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">CMD体育</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_tfg.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">雷火电竞</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="game-card">
+              <img src="images/pcTripartiteLogo/logo_db.png" alt="游戏图标" />
+              <div class="game-info">
+                <div class="title">DB电竞</div>
+                <a href="javascript:void(0)" class="btn">进入游戏</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev game-prev"></div>
+        <div class="swiper-button-next game-next"></div>
+      </div>
+
+      <div class="container3">
+        <div class="section-title">
+          <div class="line"></div>
+          <div class="main">关於娱乐城</div>
+        </div>
+        <div class="home-con-item-abous">
+          <div>
+            <div>
+              <p class="home-con-item-abous-txt1">娱乐城游戏委员会推荐</p>
+              <div class="home-con-item-abous-txt2">
+                「娱乐城」是世界级亚洲特色的五星级综合渡假城.
+                第一期于2011年5月15日正式开业，投资额达165亿港元，渡假城内提供超过2,200间客房及套房。
+                第二期于2015年5月27日，「娱乐城」「澳门百老汇™」的开幕，将原来版图双倍扩展至超过110万平方米，总投资额超过430亿港元，并进一步向集团的1,000亿港元投资承诺迈进。
+                娱乐城全资线上责任游戏，持澳门合法线上责任游戏牌照，受娱乐城监察协调局监督。
+              </div>
+            </div>
+            <div class="home-con-item-abous-bg">
+              <img src="images/index_vip.png" alt="" />
+            </div>
+          </div>
+          <div class="home-con-item-hzhb">
+            <div>合作伙伴</div>
+            <img src="images/index_partner.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+      $("#header").load("header.html", function () {
+        activateNavHighlight();
+      });
+      $("#footer").load("footer.html");
+
+      // swiper
+      window.addEventListener("load", () => {
+        const bannerSwiper = new Swiper(".banner-swiper", {
+          loop: true,
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+          },
+        });
+        // 真人
+        const swiper = new Swiper(".live-swiper", {
+          loop: true,
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+          },
+        });
+        // 游戏
+        const gameSwiper = new Swiper(".game-swiper", {
+          loop: true,
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".game-next",
+            prevEl: ".game-prev",
+          },
+        });
+      });
+
+      // 中奖榜单start
+      const games = [
+        "百家乐",
+        "龙虎",
+        "抢庄牛牛",
+        "二人麻将",
+        "赢财神",
+        "德州扑克",
+        "炸金花",
+        "21点",
+        "抢庄牌九",
+        "寻宝黄金城",
+        "赏金女王",
+        "招财猫",
+        "麻将胡了",
+        "烈火战神",
+        "快乐捕鱼",
+        "王者荣耀",
+        "水果炸弹",
+        "巨龙传说",
+        "功夫小子",
+        "生存者",
+      ];
+
+      function getRandomAccount() {
+        const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+        const prefix =
+          chars[Math.floor(Math.random() * chars.length)] +
+          chars[Math.floor(Math.random() * chars.length)];
+        const suffix =
+          chars[Math.floor(Math.random() * chars.length)] +
+          chars[Math.floor(Math.random() * chars.length)];
+        return `${prefix}**${suffix}`;
+      }
+
+      function getRandomAmount() {
+        return `¥ ${(Math.random() * (10000 - 100) + 100).toFixed(2)}`;
+      }
+
+      function createWinnerRows() {
+        const container = document.getElementById("winnerList");
+        let html = "";
+        for (let i = 0; i < 20; i++) {
+          const game = games[Math.floor(Math.random() * games.length)];
+          const account = getRandomAccount();
+          const amount = getRandomAmount();
+          html += `
+                    <div class="item">
+                        <div>${game}</div>
+                        <div>${account}</div>
+                        <div>${amount}</div>
+                    </div>
+                `;
+        }
+        container.innerHTML = html + html;
+      }
+
+      createWinnerRows();
+      // 中奖榜单end
+    </script>
+  </body>
+</html>

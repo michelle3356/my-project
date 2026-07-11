@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/passwordTip.js"></script>
+    <style>
+      .reg-container {
+        min-height: 100vh;
+        background: url("images/bg.jpg") center/cover;
+        padding: 0 50px;
+      }
+
+      .reg-wrap {
+        position: relative;
+        padding-top: 200px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .reg-banner {
+        position: relative;
+        width: 403px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.35);
+      }
+
+      .reg-banner img {
+        max-width: 100%;
+        height: 556px;
+        position: absolute;
+        left: 65px;
+        bottom: 0;
+      }
+
+      .reg-box {
+        overflow-y: auto;
+        width: 510px;
+        height: 556px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px 120px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .reg-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .reg-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .reg-subtitle {
+        color: #666;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 0 15px;
+        font-size: 14px;
+      }
+
+      .verify-code {
+        margin-top: 10px;
+      }
+
+      .verify-code img {
+        height: 40px;
+        cursor: pointer;
+      }
+
+      .reg-btn {
+        width: 100%;
+        height: 40px;
+        background: #c4996c;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .reg-btn:hover {
+        background: #b38a5e;
+      }
+
+      .service-btn {
+        display: block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #c4996c;
+        border-radius: 5px;
+        color: #c4996c;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      .service-btn:hover {
+        background: #f9f5f2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div class="reg-container">
+      <div class="reg-wrap">
+        <div class="reg-banner">
+          <img src="images/banner-reg.png" alt="Reg Banner" />
+        </div>
+        <div class="reg-box">
+          <div class="reg-header">
+            <div class="reg-title">REGISTER</div>
+            <div class="reg-subtitle">账号注册</div>
+          </div>
+          <form
+            action="/index.php/user/registered?type=<?= $type; ?>"
+            method="post"
+            onajax="register_before_submit"
+            enter="true"
+            call="registerSubmit"
+            target="ajax"
+          >
+            <div class="reg_content">
+              <div class="form-group">
+                <input
+                  class="form-input"
+                  placeholder="请输入帐号,长度6-15个字符"
+                  name="username"
+                  id="reg_username"
+                  type="text"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  name="password"
+                  type="password"
+                  id="password"
+                  class="form-input passwordKeyUp_PC"
+                  placeholder="请输入密码,长度6-15个字符"
+                />
+              </div>
+
+              <div class="form-group">
+                <div
+                  style="
+                    width: 100%;
+                    height: 10px;
+                    background-color: #e0e0e0;
+                    border-radius: 3px;
+                  "
+                >
+                  <div
+                    id="strength-bar-inner"
+                    style="width: 0%; height: 100%; transition: width 0.3s"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="password"
+                  name="cpasswd"
+                  placeholder="请再次确认密码"
+                  class="form-input"
+                  maxlength="15"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  class="form-input"
+                  placeholder="请输入真实姓名"
+                  name="name"
+                  id="name"
+                  type="text"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  class="form-input"
+                  placeholder="请输入4位数取款密码"
+                  name="coinpwd"
+                  oninput="value=value.replace(/[^\d]/g,'')"
+                  type="password"
+                />
+              </div>
+            </div>
+            <div class="form-group agree">
+              <input type="checkbox" id="agree" required />
+              <label for="agree"
+                >已满18岁，且同意本站
+                <a href="javascript:void(0)">用户注册协议</a></label
+              >
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="reg-btn">立即注册</button>
+            </div>
+            <div class="form-group">
+              <button type="button" class="reg-btn">免费试玩</button>
+            </div>
+
+            <div class="form-group">
+              <a href="javascript:void(0)" class="service-btn">联系客服</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+
+      // 检测密码强度
+      document.addEventListener("DOMContentLoaded", function () {
+        var passwordInput = document.querySelector(".passwordKeyUp_PC");
+        if (passwordInput) {
+          passwordInput.addEventListener("keyup", function () {
+            var password = this.value;
+            var strengthBar = document.getElementById("strength-bar-inner");
+            var strengthText = document.getElementById("strength-text");
+
+            var hasLower = /[a-z]/.test(password);
+            var hasUpper = /[A-Z]/.test(password);
+            var hasNumber = /\d/.test(password);
+            var hasSpecial = /[@$!%*?&#]/.test(password);
+            var countSpecial = (password.match(/[@$!%*?&#]/g) || []).length;
+
+            if (password.length === 0) {
+              strengthBar.style.width = "0%";
+              strengthText.textContent = "请输入密码";
+              strengthText.style.color = "#333";
+            } else if (
+              hasLower &&
+              hasUpper &&
+              hasNumber &&
+              hasSpecial &&
+              countSpecial >= 2
+            ) {
+              strengthBar.style.width = "100%";
+              strengthBar.style.backgroundColor = "green";
+              strengthText.textContent = "密码强度: 强";
+              strengthText.style.color = "green";
+            } else if (
+              hasLower &&
+              hasUpper &&
+              hasNumber &&
+              hasSpecial &&
+              countSpecial >= 1
+            ) {
+              strengthBar.style.width = "50%";
+              strengthBar.style.backgroundColor = "orange";
+              strengthText.textContent = "密码强度: 中";
+              strengthText.style.color = "orange";
+            } else {
+              strengthBar.style.width = "25%";
+              strengthBar.style.backgroundColor = "red";
+              strengthText.textContent = "密码强度: 弱";
+              strengthText.style.color = "red";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

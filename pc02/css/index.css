@@ -1,0 +1,111 @@
+﻿
+/* banner */
+.index-m-top{margin-top:146px;margin-bottom:10px; overflow: hidden;}
+.index_banner { width: 790px; position: relative; height: 310px; overflow: hidden; }
+.index_banner .prev,.index_banner .next{position: absolute; top:130px; z-index: 1; display: inline-block; width: 35px; height: 70px; background-position: center top; background-repeat: no-repeat; cursor: pointer; vertical-align: top}	
+.index_banner .prev{ left: 0; background-image: url('../images/prev.png')}	
+.index_banner .next{ right: 0; background-image: url('../images/next.png')}	
+.index_banner .prev:hover{ background-position: center bottom}	
+.index_banner .next:hover{ background-position: center bottom}
+.index_banner .bd { position: relative; z-index: 0; }
+.index_banner .bd ul { width: 100% !important; }
+.index_banner .bd li { width: 100% !important; height: 360px; }
+.index_banner .bd li .siteWidth { width: 1000px; position: relative; margin: 0 auto; height: 360px; }
+.index_banner .bd li a { height: 360px; display: block; }
+.index_banner .hd { width: 100%; position: absolute; z-index: 1; bottom: 0px; right:10px; height: 20px; line-height: 20px; text-align: right; }
+.index_banner .hd ul { display: inline-block; margin: 0 auto; text-align: center; }
+.index_banner .hd ul li { display: block; cursor: pointer; width: 14px; height: 14px; float: left; z-index: 100; margin-left: 10px; border-radius: 100%; background: #FFF; text-indent: -9999px; }
+.index_banner .hd ul .on { background: #e1c969 }
+/*login*/
+.login {background:#fff; padding: 0px 0px 10px 30px; overflow: hidden; /*box-sizing: border-box;*/width: 280px; }
+.login p { height: 38px; line-height: 38px; margin: 0px auto; margin-bottom: 15px; position: relative; }
+
+.login p .img01 { position: absolute; top: 10px; left: 10px; }
+.login .ttl { margin: 20px 25px 15px 0; text-align: center; height: auto; line-height: inherit; }
+.login .ttl span { font-size: 14px;}
+.login p input[type=text], .login p input[type=password] { width: 214px; padding-left: 40px;height:40px; line-height: 40px; border: none; color: #666; font-size: 14px; display: block; border: 1px solid #e6e6e6; background-color: #F5F5F5; }
+.login p input:focus { transition: all 0.3s; border: 1px solid #000; }
+.login .p04 input:focus { border: none; }
+.login .p02 .forget {display: block; position: absolute; color: #4a3863; right: 3px; top: 5px; line-height: 2.0; width: 66px; text-align: center; text-decoration: underline; }
+.login .p02 .forget:hover { color: #f00; }
+
+.login .p03 .test { top:3px; right: 18px; width: 95px; height: 36px; position: absolute; }
+.login .p04 input { font-size: 15px; border: none; width: 256px; float: left; height: 40px; line-height: 40px; color: #654318; cursor: pointer; transition: all 0.4s; background: linear-gradient(90deg, #f8de49 0, #ffc000); }
+.login .p04 input:hover { background: linear-gradient(90deg, #1d62f0 0, #1ad6fd); }
+.login .p05 input { font-size: 15px; border: none; width: 256px; float: left; height: 40px; line-height: 40px; color: #FFF; cursor: pointer; transition: all 0.4s; background: linear-gradient(90deg, #1d62f0 0, #1aa0fd); }
+.login .p05 input:hover { background: linear-gradient(90deg, #0075d9 0, #2395ff); }
+.login .p06 {padding-top:10px;margin-bottom:10px;height: auto; line-height: inherit; color: #ffe8a1; }
+.login .p06 a { display: inline-block; color: #666; float: left; font-size: 14px; }
+.login .p06 a.reg { float: right; color: #f00;margin-right:30px;}
+.login .p06 a.reg span { display: block; padding-right: 10px; background: url('../images/icon-arrow.png') no-repeat right center; }
+.login .p06 a:hover { color: #f00; }
+.login .p06 .pass{ color: #666;vertical-align:middle;}
+.login .p06 .pass img{ vertical-align:bottom;}
+.logined {background:#fff; padding: 0px 0px 10px 30px; overflow: hidden; /*box-sizing: border-box;*/width: 280px;  }
+.logined .memberinfo {width:100%;font-size:14px; overflow:hidden}
+.logined .memberinfo .ttl { margin: 20px 25px 15px 0; text-align: center; height: auto; line-height: inherit; color:#242424; }
+.logined .memberinfo .line{width:260px; height:1px;background:#ccc;}
+.logined .memberinfo .bot { margin: 14px 0px 0px;text-align: center; height: auto; line-height: inherit;}
+.logined .memberinfo .name,.logined .memberinfo .balance{font-size:13px;line-height:30px;vertical-align:top; color:#333}
+.logined .memberinfo .name strong,.logined .memberinfo .balance strong{font-size:14px; color:#F00}
+.logined .memberinfo a.Message-no{ background:url('../images/message.png') center top no-repeat; width:29px;height:22px; position:relative;margin-left:20px;display: inline-block; vertical-align:top; }
+.logined .memberinfo a.Message-no span{ display:inline-block;position:absolute;left:14px;top:-9px;width:35px; color:#fdfd43;}
+.logined .memberinfo a.update{background:url('../images/f5.png') no-repeat 0 6px; width:20px; height:22px; display: inline-block; margin-left:20px; vertical-align:top;}
+.logined .memberinfo a.update:hover{background:url('../images/f5-h.png') no-repeat 0 6px;}
+.logined .memberMeun{ padding:5px 0px;text-align:left;border:1px  dotted #c2c2c2; border-left:0;border-right:0; overflow:hidden;width:260px;margin-bottom: 12px;}
+.logined .memberMeun a{ float:left; display:inline-block;margin:5px 6px 5px 15px;line-height:30px; text-align:center;font-size:13px; width:105px;height:30px;border:1px solid #e6e6e6; border-radius:3px; color:#575757; }
+.logined .memberMeun a:hover{color:#ff0000}
+.logined a.logout { display:block;font-size: 15px; text-align:center; border: none; width: 100%; height: 36px; line-height: 36px; color: #FFF; cursor: pointer; transition: all 0.4s; background: linear-gradient(90deg, #23dc3b 0, #0db723); }
+.logined  a.logout:hover { background: linear-gradient(90deg, #0075d9 0, #2395ff); }
+
+/*===============games=========*/
+.hotlist { position: relative; height: 62px; overflow: hidden; background: #fff; margin: 10px 0;width:1100px; }
+
+.hotlist .prev,.hotlist .next{position: absolute; top: 0; z-index: 1; display: inline-block; width: 26px; height: 62px; background-position: center top; background-repeat: no-repeat; cursor: pointer; vertical-align: top}	
+.hotlist .prev{ left: 0; background-image: url('../images/left.jpg')}	
+.hotlist .next{ right: 0; background-image: url('../images/right.jpg')}	
+.hotlist .prev:hover{ background-position: center bottom}	
+.hotlist .next:hover{ background-position: center bottom}
+.hotlist .main-cell{background:#fff; overflow:hidden;width:1050px;margin: 0px 26px 0;}
+.hotlist .main-cell  li{width:80px;height:62px; float:left; display:inline-block; font-size:14px;text-align:center;}
+.hotlist .main-cell  li a{width:80px;height:62px; padding-top:6px;display:block; text-align:center; background:#fff;}
+.hotlist .main-cell  li a:hover{background:#fafafa;}
+.dis-table{display: table; margin: 0 auto;}
+.hotlist .main-cell  li a .img{ display: table-cell; vertical-align: middle;height:26px;text-align: center;}
+.hotlist .main-cell  li a .img img{display: block; vertical-align: middle; margin:0 auto;height:26px;}
+.hotlist .main-cell  li a span{display: block;line-height:30px; color:#666;}
+
+/*6大游戏模块*/
+.intro-box { width: 1100px; margin: 10px auto; overflow: hidden; }
+.intro-box ul li { background: #fff; width: 257px; height: 340px;margin-bottom:10px;  /*-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); -ms-box-shadow: 0 11px 5px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); */text-align: center; margin-left:15px; display: inline-block; vertical-align: top; border: 1px solid #e6e6e6 }
+.intro-box ul li h5 { font-weight: 400; color: #000; font-size: 24px; margin-top:20px; transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; }
+.intro-box ul li p { color: #777; font-size: 14px; margin: 20px 4px 10px 18px; text-align:left;line-height:20px; }
+.intro-box ul li i { margin-top: 10px; transform-origin: top; -webkit-transform-origin: top; -ms-transform-origin: top; transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; }
+.intro-box ul li .btn-primary { color: #242424; font-size: 16px; border-radius:30px; background: linear-gradient(90deg, #fddb55 0, #febe39); text-align: center; display: block;width: 212px; line-height: 40px; visibility: hidden; opacity: 0;  margin: 0px auto; transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; }
+.intro-box ul li.item1,.intro-box ul li.item5 { margin-left: 0; }
+.intro-box ul li.item1 i { display: inline-block; width: 238px; height: 172px; background: url('../images/icons-6games-1.png') no-repeat; }
+.intro-box ul li.item2 i { display: inline-block; width: 238px; height: 172px; background: url('../images/icons-6games-2.png') no-repeat; }
+.intro-box ul li.item3 i { display: inline-block; width: 238px; height: 172px; background: url('../images/icons-6games-3.png') no-repeat; }
+.intro-box ul li.item4 i { display: inline-block; width: 238px; height: 172px; background: url('../images/icons-6games-4.png') no-repeat; }
+.intro-box ul li.item5 i { display: inline-block; width: 238px; height: 172px; background: url('../images/icons-6games-5.png') no-repeat; }
+.intro-box ul li.item6 i { display: inline-block; width: 238px; height: 172px; background: url('../images/icons-6games-6.png') no-repeat; }
+.intro-box ul li:hover i { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); border-radius:6px; }
+.intro-box ul li:hover p { margin-top: 10px;}
+.intro-box ul li:hover h5 { margin-top: -10px; }
+.intro-box ul li:hover .btn-primary { visibility: visible; opacity: 1; }
+.intro-box .item7 {width:538px;display: inline-block;margin-left:15px;background: #fff; border: 1px solid #e6e6e6;    position: absolute;}
+
+/* ==============    index-winner     ============== */
+.winner{margin: 0px auto; }
+.winner .title{width:183px;height:37px;line-height:25px;background: url('../images/game-mpk.png') no-repeat;color:#fff; font-size:16px; font-weight:500; text-align:center;margin:0 auto;}
+.winner .jackpot-notice { margin: 5px 0 0 10px; height:148px;overflow:hidden;}
+.winner .jackpot-notice ul{}
+.winner .jackpot-notice ul li {width:528px;  text-align: left;line-height:24px;height:24px;  border:none;margin:0px;}
+.winner .jackpot-notice ul li p {margin: 0px 0px 0px 10px;color: #797979; font-size: 12px;display: inline-block; float:left;   }
+.winner .jackpot-notice ul li p span { color: #323232;width: 81px; display: inline-block; }
+.winner .jackpot-notice ul li p span.c1{}
+.winner .jackpot-notice ul li p span.c2 { color: #ff0000;}
+.winner .jackpot-notice ul li p span.c2+span { color: #ff0000; }
+
+
+

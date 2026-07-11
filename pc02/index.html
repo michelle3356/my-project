@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>澳门威尼斯人</title>
+    <link href="/" rel="shortcut icon" type="image/x-icon" />
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/iife.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jsencrypt.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/countUp.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/common_wac.js"></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/slick.css" rel="stylesheet" />
+    <link href="css/wac_style_v2.css" rel="stylesheet" />
+  </head>
+  
+  <body>
+    <div id="header"></div>
+		<div class="banner-wrap" style="height: 580px;">
+			<div class="swiper banner-swiper" style="height: 580px;">
+				<div class="swiper-wrapper">
+					<div
+						class="swiper-slide"
+						style="
+							background: url('images/pc_banner1.webp') center;
+							background-repeat: no-repeat;
+							background-size: 100% 100%;
+						"
+					></div>
+					<div
+						class="swiper-slide"
+						style="
+							background: url('images/pc_banner2.webp') center;
+							background-repeat: no-repeat;
+							background-size: 100% 100%;
+						"
+					></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+    <div class="margin-top">
+      <!--最新消息-->
+      <div class="newsbox">
+        <div class="news wid1100">
+          <div class="news_tit"></div>
+          <div class="news_text">
+            <marquee
+              id="msgNews"
+              scrollamount="4"
+              scrolldelay="100"
+              direction="left"
+              onmouseover="this.stop();"
+              onmouseout="this.start();"
+              style="height: 41px; line-height: 41px"
+            >
+              滚动公告
+            </marquee>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="position: relative">
+      <ul class="link-ul clearfix">
+        <li onclick="javascript: toPage('PageRegister');">
+          <a href="javascript:void(0)">
+            <div class="link-img">
+              <img src="images/lj01.png" />
+            </div>
+            <div class="link-txt">免费注册<br /><span>REGISTRATION</span></div>
+            <i></i>
+          </a>
+        </li>
+        <li onclick="winopen('QuickDesposit','会员中心','NewCenter')">
+          <a href="javascript:void(0)">
+            <div class="link-img">
+              <img src="images/lj02.png" />
+            </div>
+            <div class="link-txt">快速充值<br /><span>FAST RECHARGE</span></div>
+            <i></i>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" onclick="toPage('PageActivity');">
+            <div class="link-img">
+              <img src="images/lj03.png" />
+            </div>
+            <div class="link-txt">优惠大厅<br /><span>PROMQTON HALL</span></div>
+            <i></i>
+          </a>
+        </li>
+        <li>
+          <a href="javascript:void(0)">
+            <div class="link-img">
+              <img src="images/lj04.png" />
+            </div>
+            <div class="link-txt">APP下载<br /><span>APP DOWNLOAD</span></div>
+            <i></i>
+          </a>
+        </li>
+      </ul>
+      <div class="title text-center">
+        <img src="images/title.png" />
+      </div>
+      <div class="tt-sm text-center">热门游戏应有尽有 超高几率爆大奖</div>
+      <div class="clearfix tabs-box">
+        <ul class="pull-left tabs-ul">
+          <li class="active">
+            <a href="#qp03" aria-controls="qp03" role="tab" data-toggle="tab"
+              ><i><img src="images/icon-tabs03.png" /></i>
+              <div>PG电子<br /><span>Pggaming</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#qp01" aria-controls="qp01" role="tab" data-toggle="tab"
+              ><i><img src="images/icon-tabs01.png" /></i>
+              <div>开元棋牌<br /><span>kaiyuangaming</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#qp02" aria-controls="qp02" role="tab" data-toggle="tab"
+              ><i><img src="images/icon-tabs02.png" /></i>
+              <div>MG电子<br /><span>Microgaming</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#qp04" aria-controls="qp04" role="tab" data-toggle="tab"
+              ><i><img src="images/icon-tabs04.png" /></i>
+              <div>CQ9电子<br /><span>Cq9gaming</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#qp05" aria-controls="qp05" role="tab" data-toggle="tab"
+              ><i><img src="images/icon-tabs05.png" /></i>
+              <div>JDB电子<br /><span>Jdbgaming</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#qp06" aria-controls="qp06" role="tab" data-toggle="tab"
+              ><i><img src="images/icon-tabs06.png" /></i>
+              <div>捕鱼游戏<br /><span>Jdbgaming</span></div>
+            </a>
+          </li>
+        </ul>
+        <div class="pull-right tabs-right">
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" id="qp01">
+              <ul class="tabs-list clearfix">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('KY', '830');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_qipai1.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">抢庄牛牛</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('KY', '600');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_qipai2.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">二十一点</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('KY', '860');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_qipai3.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">三公</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('KY', '890');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_qipai4.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">看牌抢庄牛牛</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('KY', '220');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_qipai5.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">炸金花</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('KY', '740');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_qipai6.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">二人麻将</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('KY', '720');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_qipai7.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">二八杠</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('KY', '8130');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_qipai8.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">跑得快</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="qp02">
+              <ul class="tabs-list clearfix">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MG', 'SMG_immortalRomance');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_dz1.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">不朽的浪漫</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MG', 'SMG_breakAway');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_dz2.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">冰球突破</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MG', 'SMG_reelGems');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_dz3.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">宝石转轴</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MG', 'SMG_basketballStar');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_dz4.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">篮球巨星</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MG', 'SMG_luckyTwins');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_dz5.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">幸运双星</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MG', 'SMG_playboy');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_dz6.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">花花公子</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MG', 'SMG_ladiesNite');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_dz7.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">淑女派对</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MG', 'SMG_breakAwayDeluxe');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_dz8.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">冰球突破豪华版</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="qp03">
+              <ul class="tabs-list clearfix">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('NPG', '65');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_pgdz1.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">麻将胡了</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('NPG', '74');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_pgdz2.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">麻将胡了2</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('NPG', '48');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_pgdz3.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">双囍临门</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('NPG', '87');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_pgdz4.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">寻宝黄金城</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('NPG', '60');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_pgdz5.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">爱尔兰精灵</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('NPG', '84');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_pgdz6.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">赏金女王</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('NPG', '89');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_pgdz7.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">招财喵</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('NPG', '106');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_pgdz8.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">麒麟送宝</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="qp04">
+              <ul class="tabs-list clearfix">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('CQ9', '52_cq9_mobile_html5_slot');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_cq9dz1.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">跳高高</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('CQ9', '7_cq9_mobile_html5_slot');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_cq9dz2.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">跳起来</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('CQ9', '138_cq9_mobile_html5_slot');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_cq9dz3.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">跳过来</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('CQ9', '99_cq9_mobile_html5_slot');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_cq9dz4.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">跳更高</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('CQ9', '105_cq9_mobile_html5_slot');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_cq9dz5.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">单手跳高高</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('CQ9', '50_cq9_mobile_html5_slot');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_cq9dz6.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">鸿福齐天</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('CQ9', '89_cq9_mobile_html5_slot');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_cq9dz7.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">雷神</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('CQ9', '69_cq9_mobile_html5_slot');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_cq9dz8.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">发财神</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="qp05">
+              <ul class="tabs-list clearfix">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_jdbdz1.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">疯狂金刚</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_jdbdz2.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">三倍金刚</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_jdbdz3.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">芝麻开门</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_jdbdz4.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">飞鸟派对</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_jdbdz5.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">蹦迪吧</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_jdbdz6.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">富豪哥</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_jdbdz7.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">王牌特工</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_jdbdz8.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">变脸</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="qp06">
+              <ul class="tabs-list clearfix">
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB', '7_7003');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_fish1.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">JDB财神捕鱼</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('MW', 'MW');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_fish2.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">MW千炮捕鱼</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB', '7_7005');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_fish3.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">JDB捕鱼一路发</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB', '7_7004');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_fish4.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">JDB五龙捕魚</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('AG', 'HM2D');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_fish9.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">PA捕鱼王</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('FG', 'fish_hl');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_fish6.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">FG欢乐捕鱼</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('SG', 'F-SF01');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_fish7.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">SG捕鱼天王</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    onclick="javascript: toGame('JDB', '7_7002');"
+                  >
+                    <div class="tabs-list-img">
+                      <img src="images/index_fish8.png" />
+                    </div>
+                    <div class="tabs-list-bottom">
+                      <div class="tabs-list-tt txt-elise">JDB龙王捕鱼2</div>
+                      <div class="start"></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="title text-center">
+        <img src="images/title02.png" />
+      </div>
+      <div class="tt-md text-center">
+        您想要的我们都有，带给您丰富的游戏体验
+      </div>
+      <ul class="ty-tabs clearfix text-center">
+        <li class="active">
+          <a
+            class="ty-tabs01"
+            href="#ty01"
+            aria-controls="ty01"
+            role="tab"
+            data-toggle="tab"
+            aria-expanded="true"
+            ><span>电子</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            class="ty-tabs02"
+            href="#ty02"
+            aria-controls="ty02"
+            role="tab"
+            data-toggle="tab"
+            aria-expanded="false"
+            ><span>棋牌</span></a
+          >
+        </li>
+        <li class="">
+          <a
+            class="ty-tabs03"
+            href="#ty03"
+            aria-controls="ty03"
+            role="tab"
+            data-toggle="tab"
+            aria-expanded="false"
+            ><span>捕鱼</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="ty-tabs04"
+            href="#ty04"
+            aria-controls="ty04"
+            role="tab"
+            data-toggle="tab"
+            ><span>真人</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="ty-tabs05"
+            href="#ty05"
+            aria-controls="ty05"
+            role="tab"
+            data-toggle="tab"
+            ><span>体育</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="ty-tabs06"
+            href="#ty06"
+            aria-controls="ty06"
+            role="tab"
+            data-toggle="tab"
+            ><span>彩票</span></a
+          >
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="ty01">
+          <div class="clearfix">
+            <div class="pull-left tabs-img">
+              <img src="images/tab-img01.png" />
+            </div>
+            <div class="pull-right tabs-right-box">
+              <div class="clearfix tabs-right-top">
+                <div class="pull-left tabs-name">电子游艺</div>
+                <div class="pull-left tabs-number text-center">
+                  <span>最高返水</span><br />4.0%
+                </div>
+              </div>
+              <div class="tabs-name-b">SLOT GAMES</div>
+              <div class="tabs-p">
+                提供各类经典老虎机游戏、刮刮乐、棋牌、街机等游戏，更多免费游戏，爆分大奖等你来。
+              </div>
+              <div class="tabs-slick text-center">
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toGame('AG', '8');"
+										tabindex="-1"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo14.png" /><img
+														class="hover-img"
+														src="images/dzlogo14on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">PA 电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=AE')"
+										tabindex="-1"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo7.png" /><img
+														class="hover-img"
+														src="images/dzlogo7on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">AE电子+</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=PS')"
+										tabindex="-1"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo9.png" /><img
+														class="hover-img"
+														src="images/dzlogo9on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">PS电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=DT')"
+										tabindex="-1"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo10.png" /><img
+														class="hover-img"
+														src="images/dzlogo10on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">DT电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=QT')"
+										tabindex="-1"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo11.png" /><img
+														class="hover-img"
+														src="images/dzlogo11on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">QT电子+</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=FG')"
+										tabindex="-1"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo12.png" /><img
+														class="hover-img"
+														src="images/dzlogo12on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">FG电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=HB')"
+										tabindex="-1"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo13.png" /><img
+														class="hover-img"
+														src="images/dzlogo13on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">HB电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=MG')"
+										tabindex="0"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo1.png" /><img
+														class="hover-img"
+														src="images/dzlogo1on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">MG 电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=BBIN')"
+										tabindex="0"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo2.png" /><img
+														class="hover-img"
+														src="images/dzlogo2on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">BBIN电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toPage('GameSlotGame','&amp;GameType=CQ9')"
+										tabindex="0"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo3.png" /><img
+														class="hover-img"
+														src="images/dzlogo3on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">CQ9 电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toGame('NPG', 'PG');"
+										tabindex="0"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo4.png" /><img
+														class="hover-img"
+														src="images/dzlogo4on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">PG 电子</div>
+									</a>
+								</div>
+								<div>
+									<a
+										href="javascript:void(0)"
+										onclick="toGame('JDB')"
+										tabindex="0"
+									>
+										<div class="tabs-slick-img">
+											<p>
+												<span
+													><img src="images/dzlogo5.png" /><img
+														class="hover-img"
+														src="images/dzlogo5on.png"
+												/></span>
+											</p>
+										</div>
+										<div class="tabs-slick-p txt-elise">JDB 电子</div>
+									</a>
+								</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="ty02">
+          <div class="clearfix">
+            <div class="pull-left tabs-img">
+              <img src="images/tab-img02.png" />
+            </div>
+            <div class="pull-right tabs-right-box">
+              <div class="clearfix tabs-right-top">
+                <div class="pull-left tabs-name">棋牌游戏</div>
+                <div class="pull-left tabs-number text-center">
+                  <span>最高返水</span><br />4.0%
+                </div>
+              </div>
+              <div class="tabs-name-b">KY开元棋牌</div>
+              <div class="tabs-p">
+                市面上热门游戏种类，选择全面多元，应有尽有玩家能不断游戏不感无趣！抢庄牛牛龙虎斗，多款棋牌任君选，好友相约竞技，游戏改变生活。
+              </div>
+              <div
+                class="tabs-slick text-center slick-initialized slick-slider slick-dotted"
+              >
+                <div class="slick-list draggable">
+                  <div
+                    class="slick-track"
+                    style="
+                      opacity: 1;
+                      width: 742px;
+                      transform: translate3d(0px, 0px, 0px);
+                    "
+                  >
+                    <div
+                      class="slick-slide slick-current slick-active"
+                      data-slick-index="0"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide70"
+                      aria-describedby="slick-slide-control70"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript: toGame('KY', '830');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/qp01.png" /><img
+                                class="hover-img"
+                                src="images/qp01.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">抢庄牛牛</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="1"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide71"
+                      aria-describedby="slick-slide-control71"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript: toGame('KY', '220');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/qp02.png" /><img
+                                class="hover-img"
+                                src="images/qp02.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">炸金花</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="2"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide72"
+                      aria-describedby="slick-slide-control72"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript:toGame('KY','890');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/qp03.png" /><img
+                                class="hover-img"
+                                src="images/qp03.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">看牌抢庄牛牛</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="3"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide73"
+                      aria-describedby="slick-slide-control73"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript:toGame('KY','740');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/qp04.png" /><img
+                                class="hover-img"
+                                src="images/qp04.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">二人麻将</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="4"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide74"
+                      aria-describedby="slick-slide-control74"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript:toGame('KY','600');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/qp05.png" /><img
+                                class="hover-img"
+                                src="images/qp05.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">二十一点</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="5"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide75"
+                      aria-describedby="slick-slide-control75"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript:toGame('KY','630');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/qp06.png" /><img
+                                class="hover-img"
+                                src="images/qp06.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">十三水</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="6"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide76"
+                      aria-describedby="slick-slide-control76"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript:toGame('KY','860');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/qp07.png" /><img
+                                class="hover-img"
+                                src="images/qp07.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">三公</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="slick-dots" role="tablist">
+                  <li class="slick-active" role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control70"
+                      aria-controls="slick-slide70"
+                      aria-label="1 of 1"
+                      tabindex="0"
+                      aria-selected="true"
+                    >
+                      01
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="ty03">
+          <div class="clearfix">
+            <div class="pull-left tabs-img">
+              <img src="images/tab-img03.png" />
+            </div>
+            <div class="pull-right tabs-right-box">
+              <div class="clearfix tabs-right-top">
+                <div class="pull-left tabs-name">捕鱼游戏</div>
+                <div class="pull-left tabs-number text-center">
+                  <span>最高返水</span><br />4.0%
+                </div>
+              </div>
+              <div class="tabs-name-b">FISH GAMES</div>
+              <div class="tabs-p">
+                超过百种玩法任您赢！澳门威尼斯人为全球各彩票玩家提供了丰富多样的游戏内容，致力为玩家打造高品质的娱乐
+                环境，安心乐享游戏空间，只为公平、公正的开奖结果。
+              </div>
+              <div
+                class="tabs-slick text-center slick-initialized slick-slider slick-dotted"
+              >
+                <div class="slick-list draggable">
+                  <div
+                    class="slick-track"
+                    style="
+                      opacity: 1;
+                      width: 636px;
+                      transform: translate3d(0px, 0px, 0px);
+                    "
+                  >
+                    <div
+                      class="slick-slide slick-current slick-active"
+                      data-slick-index="0"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide80"
+                      aria-describedby="slick-slide-control80"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript: toGame('JDB', '7_7003');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/bylogo1.png" /><img
+                                class="hover-img"
+                                src="images/bylogo1on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">JDB财神捕鱼</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="1"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide81"
+                      aria-describedby="slick-slide-control81"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('MW', 'MW');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/bylogo2.png" /><img
+                                class="hover-img"
+                                src="images/bylogo2on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">MW千炮捕鱼</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="2"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide82"
+                      aria-describedby="slick-slide-control82"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('AG', 'HM2D');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/bylogo7.png" /><img
+                                class="hover-img"
+                                src="images/bylogo7on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">PA捕鱼王</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="3"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide83"
+                      aria-describedby="slick-slide-control83"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript: toGame('JDB', '7_7001');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/bylogo4.png" /><img
+                                class="hover-img"
+                                src="images/bylogo4on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">JDB龙王捕鱼</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="4"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide84"
+                      aria-describedby="slick-slide-control84"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('FG', 'fish_hl')"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/bylogo5.png" /><img
+                                class="hover-img"
+                                src="images/bylogo5on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">FG欢乐捕鱼</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="5"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide85"
+                      aria-describedby="slick-slide-control85"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="javascript: toGame('SG', 'F-SF01');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/bylogo61.png" /><img
+                                class="hover-img"
+                                src="images/bylogo61on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">SG捕鱼天王+</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="slick-dots" role="tablist">
+                  <li class="slick-active" role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control80"
+                      aria-controls="slick-slide80"
+                      aria-label="1 of 1"
+                      tabindex="0"
+                      aria-selected="true"
+                    >
+                      01
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="ty04">
+          <div class="clearfix">
+            <div class="pull-left tabs-img">
+              <img src="images/tab-img04.png" />
+            </div>
+            <div class="pull-right tabs-right-box">
+              <div class="clearfix tabs-right-top">
+                <div class="pull-left tabs-name">真人娱乐</div>
+                <div class="pull-left tabs-number text-center">
+                  <span>最高返水</span><br />1.5%
+                </div>
+              </div>
+              <div class="tabs-name-b">LIVE CASINO</div>
+              <div class="tabs-p">
+                互动娱乐在线直播平台，让玩家游戏的同时，观赏美女主播表演、参与互动游戏。设有多个真人荷官桌台，
+                包括：百家乐、竞咪、龙虎、骰宝、轮盘等多款游戏。
+              </div>
+              <div
+                class="tabs-slick text-center slick-initialized slick-slider slick-dotted"
+              >
+                <div class="slick-list draggable">
+                  <div
+                    class="slick-track"
+                    style="
+                      opacity: 1;
+                      width: 530px;
+                      transform: translate3d(0px, 0px, 0px);
+                    "
+                  >
+                    <div
+                      class="slick-slide slick-current slick-active"
+                      data-slick-index="0"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide90"
+                      aria-describedby="slick-slide-control90"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('DG', 'DG');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/zrlogo1.png" /><img
+                                class="hover-img"
+                                src="images/zrlogo1on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">DG 梦幻厅</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="1"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide91"
+                      aria-describedby="slick-slide-control91"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('AG', 'AG');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/zrlogo7.png" /><img
+                                class="hover-img"
+                                src="images/zrlogo7on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">PA 女优厅</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="2"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide92"
+                      aria-describedby="slick-slide-control92"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('BG', 'BG');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/zrlogo3.png" /><img
+                                class="hover-img"
+                                src="images/zrlogo3on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">BG 大游厅</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="3"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide93"
+                      aria-describedby="slick-slide-control93"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('BBIN', 'BBIN');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/zrlogo4.png" /><img
+                                class="hover-img"
+                                src="images/zrlogo4on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">BBIN 波音厅</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="4"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide94"
+                      aria-describedby="slick-slide-control94"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('MG', 'MG');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/zrlogo5.png" /><img
+                                class="hover-img"
+                                src="images/zrlogo5on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">MG 视讯厅</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="slick-dots" role="tablist">
+                  <li class="slick-active" role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control90"
+                      aria-controls="slick-slide90"
+                      aria-label="1 of 1"
+                      tabindex="0"
+                      aria-selected="true"
+                    >
+                      01
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="ty05">
+          <div class="clearfix">
+            <div class="pull-left tabs-img">
+              <img src="images/tab-img06.png" />
+            </div>
+            <div class="pull-right tabs-right-box">
+              <div class="clearfix tabs-right-top">
+                <div class="pull-left tabs-name">体育赛事</div>
+                <div class="pull-left tabs-number text-center">
+                  <span>最高返水</span><br />1.0%
+                </div>
+              </div>
+              <div class="tabs-name-b">SPORTS</div>
+              <div class="tabs-p">
+                业内最高赔率，覆盖世界各地赛事，让球、大小、半全场、波胆单双、总入球、连串过关等多元竞猜。
+                更有动画直播、视频直播，让您轻松体验聊球投注，乐在其中。
+              </div>
+              <div
+                class="tabs-slick text-center slick-initialized slick-slider slick-dotted"
+              >
+                <div class="slick-list draggable">
+                  <div
+                    class="slick-track"
+                    style="
+                      opacity: 1;
+                      width: 318px;
+                      transform: translate3d(0px, 0px, 0px);
+                    "
+                  >
+                    <div
+                      class="slick-slide slick-current slick-active"
+                      data-slick-index="0"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide100"
+                      aria-describedby="slick-slide-control100"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('NHG', 'NHG');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/tylogo1.png" /><img
+                                class="hover-img"
+                                src="images/tylogo1on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">皇冠体育</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="1"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide101"
+                      aria-describedby="slick-slide-control101"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('SB', 'SB');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/tylogo2.png" /><img
+                                class="hover-img"
+                                src="images/tylogo2on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">沙巴体育</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="2"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide102"
+                      aria-describedby="slick-slide-control102"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('FT', 'FT');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/tylogo3.png" /><img
+                                class="hover-img"
+                                src="images/tylogo3on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">368体育</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="slick-dots" role="tablist">
+                  <li class="slick-active" role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control100"
+                      aria-controls="slick-slide100"
+                      aria-label="1 of 1"
+                      tabindex="0"
+                      aria-selected="true"
+                    >
+                      01
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="ty06">
+          <div class="clearfix">
+            <div class="pull-left tabs-img">
+              <img src="images/tab-img05.png" />
+            </div>
+            <div class="pull-right tabs-right-box">
+              <div class="clearfix tabs-right-top">
+                <div class="pull-left tabs-name">彩票投注</div>
+              </div>
+              <div class="tabs-name-b">SLOT GAMES</div>
+              <div class="tabs-p">
+                超过百种彩票玩法任您赢！澳门威尼斯人为全球各彩票玩家提供了丰富多样的游戏内容，致力为玩家打造高品质的
+                娱乐环境，安心乐享游戏空间，只为公平、公正的开奖结果。
+              </div>
+              <div
+                class="tabs-slick text-center slick-initialized slick-slider slick-dotted"
+              >
+                <div class="slick-list draggable">
+                  <div
+                    class="slick-track"
+                    style="
+                      opacity: 1;
+                      width: 212px;
+                      transform: translate3d(0px, 0px, 0px);
+                    "
+                  >
+                    <div
+                      class="slick-slide slick-current slick-active"
+                      data-slick-index="0"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide110"
+                      aria-describedby="slick-slide-control110"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('BBIN', 'CP');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/dzlogo2.png" /><img
+                                class="hover-img"
+                                src="images/dzlogo2on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">BBIN 彩票</div>
+                      </a>
+                    </div>
+                    <div
+                      class="slick-slide slick-active"
+                      data-slick-index="1"
+                      aria-hidden="false"
+                      tabindex="0"
+                      role="tabpanel"
+                      id="slick-slide111"
+                      aria-describedby="slick-slide-control111"
+                      style="width: 106px"
+                    >
+                      <a
+                        href="javascript:void(0)"
+                        onclick="toGame('vr', 'vr');"
+                        tabindex="0"
+                      >
+                        <div class="tabs-slick-img">
+                          <p>
+                            <span
+                              ><img src="images/cplogo3.png" /><img
+                                class="hover-img"
+                                src="images/cplogo3on.png"
+                            /></span>
+                          </p>
+                        </div>
+                        <div class="tabs-slick-p txt-elise">VR 彩票</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="slick-dots" role="tablist">
+                  <li class="slick-active" role="presentation">
+                    <button
+                      type="button"
+                      role="tab"
+                      id="slick-slide-control110"
+                      aria-controls="slick-slide110"
+                      aria-label="1 of 1"
+                      tabindex="0"
+                      aria-selected="true"
+                    >
+                      01
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="ty-tabs sb-tabs clearfix">
+        <li class="active">
+          <a
+            class="sb01"
+            href="#sb01"
+            aria-controls="sb01"
+            role="tab"
+            data-toggle="tab"
+            ><span>IOS APP</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="sb02"
+            href="#sb02"
+            aria-controls="sb02"
+            role="tab"
+            data-toggle="tab"
+            ><span>安卓 APP</span></a
+          >
+        </li>
+        <li>
+          <a
+            class="sb03"
+            href="#sb03"
+            aria-controls="sb03"
+            role="tab"
+            data-toggle="tab"
+            ><span>HTML5</span></a
+          >
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="sb01">
+          <div class="clearfix">
+            <div class="pull-left sb-img">
+              <img src="images/sb-img01.png" />
+            </div>
+            <div class="pull-right sb-right text-center">
+              <div class="sb-right-tt">随时随地 从容畅玩</div>
+              <div class="sb-right-p">内地顶尖的手机投注APP</div>
+              <div class="sb-logo">IOS APP</div>
+              <div class="sb-ewm">
+                <div class="sb-ewm-sm">
+                  <div class="sb-ewm-back">
+                    <img src="images/ewm.png" />
+                  </div>
+                  <div class="sb-ewm-tt">扫码下载APP</div>
+                </div>
+                <div class="sb-ewm-sm">
+                  <div class="sb-ewm-back">
+                    <img src="images/ewm.png" />
+                  </div>
+                  <div class="sb-ewm-tt">访问HTML5</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="sb02">
+          <div class="clearfix">
+            <div class="pull-left sb-img">
+              <img src="images/sb-img01.png" />
+            </div>
+            <div class="pull-right sb-right text-center">
+              <div class="sb-right-tt">随时随地 从容畅玩</div>
+              <div class="sb-right-p">内地顶尖的手机投注APP</div>
+              <div class="sb-logo">安卓 APP</div>
+              <div class="sb-ewm">
+                <div class="sb-ewm-sm">
+                  <div class="sb-ewm-back">
+                    <img src="images/ewm.png" />
+                  </div>
+                  <div class="sb-ewm-tt">扫码下载APP</div>
+                </div>
+                <div class="sb-ewm-sm">
+                  <div class="sb-ewm-back">
+                    <img src="images/ewm.png" />
+                  </div>
+                  <div class="sb-ewm-tt">访问HTML5</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="sb03">
+          <div class="clearfix">
+            <div class="pull-left sb-img">
+              <img src="images/sb-img01.png" />
+            </div>
+            <div class="pull-right sb-right text-center">
+              <div class="sb-right-tt">随时随地 从容畅玩</div>
+              <div class="sb-right-p">内地顶尖的手机投注APP</div>
+              <div class="sb-logo">HTML5</div>
+              <div class="sb-ewm">
+                <div class="sb-ewm-sm">
+                  <div class="sb-ewm-back">
+                    <img src="images/ewm.png" />
+                  </div>
+                  <div class="sb-ewm-tt">扫码下载APP</div>
+                </div>
+                <div class="sb-ewm-sm">
+                  <div class="sb-ewm-back">
+                    <img src="images/ewm.png" />
+                  </div>
+                  <div class="sb-ewm-tt">访问HTML5</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-title text-center">全球顶级娱乐平台一应俱全</div>
+      <div class="pt-tt-sm text-center">Quality service experience</div>
+      <div class="pt-box clearfix number-list active">
+        <div class="col-xs-3">
+          <div class="first-speedometer first-speedometer01">
+            <div class="first-speedometer-text">
+              <span class="counter alreadyRunNum" id="countUp1">25</span>秒
+            </div>
+            <img
+              class="first-speedometer-completeness"
+              src="images/gear.png"
+            />
+            <div class="hx-left">
+              <div class="first-speedometer-mask01">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="hx-right">
+              <div class="first-speedometer-mask01">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="first-speedometer-title">存款秒到帐</p>
+          </div>
+          <div class="pt-title-c clearfix">
+            <div class="clearfix">
+              <div class="pull-left">
+                <img src="images/icon-pt01.png" />
+              </div>
+              <span
+                >专业<br />
+                <font>PROFESSION</font>
+              </span>
+            </div>
+          </div>
+          <div class="pt-p">
+            近千场精采体育赛事，更有真人、彩票、电子游戏等多种娱乐方式<br />选择，让您拥有完美
+            游戏体验。
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="first-speedometer first-speedometer01">
+            <div class="first-speedometer-text">
+              <span class="counter alreadyRunNum" id="countUp2">180</span>秒
+            </div>
+            <img
+              class="first-speedometer-completeness"
+              src="images/gear.png"
+            />
+            <div class="hx-left">
+              <div class="first-speedometer-mask01">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="hx-right">
+              <div class="first-speedometer-mask01">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="first-speedometer-title">存款秒到帐</p>
+          </div>
+          <div class="pt-title-c clearfix">
+            <div class="clearfix">
+              <div class="pull-left">
+                <img src="images/icon-pt02.png" />
+              </div>
+              <span
+                >安全<br />
+                <font>SAFETY</font>
+              </span>
+            </div>
+          </div>
+          <div class="pt-p">
+            独家开发专利，采用128位加密技术和严格
+            的安全管理体系，金资得到最完善保障让你用的开心，玩的也安心，无后顾之忧！
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="first-speedometer first-speedometer01">
+            <div class="first-speedometer-text">
+              <span class="counter alreadyRunNum" id="countUp3">80</span>家
+            </div>
+            <img
+              class="first-speedometer-completeness"
+              src="images/gear.png"
+            />
+            <div class="hx-left">
+              <div class="first-speedometer-mask01">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="hx-right">
+              <div class="first-speedometer-mask01">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="first-speedometer-title">存款秒到帐</p>
+          </div>
+          <div class="pt-title-c clearfix">
+            <div class="clearfix">
+              <div class="pull-left">
+                <img src="images/icon-pt03.png" />
+              </div>
+              <span
+                >便捷<br />
+                <font>CONVENIENT</font>
+              </span>
+            </div>
+          </div>
+          <div class="pt-p">
+            引领市场先锋及卓越技术，自主研发了全套
+            终端应用，让你在各载具、app上随时随地
+            24小时在线畅游，让客服给予最贴心优质的服务。
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="first-speedometer first-speedometer01">
+            <div class="first-speedometer-text">
+              <span class="counter alreadyRunNum" id="countUp4">47</span>家
+            </div>
+            <img
+              class="first-speedometer-completeness"
+              src="images/gear.png"
+            />
+            <div class="hx-left">
+              <div class="first-speedometer-mask01">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="hx-right">
+              <div class="first-speedometer-mask01">
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="first-speedometer-title">存款秒到帐</p>
+          </div>
+          <div class="pt-title-c clearfix">
+            <div class="clearfix">
+              <div class="pull-left">
+                <img src="images/icon-pt04.png" />
+              </div>
+              <span
+                >秒速<br />
+                <font>PER SECOND</font>
+              </span>
+            </div>
+          </div>
+          <div class="pt-p">
+            自主研发的财务处理系统，真正做到安心快
+            速存、取、转。独家网络优化技术，为您提
+            供安心一流的游戏体验，最大优化网路延迟。
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+		<script src="js/header.js"></script>
+  
+    <script>
+      $("#header").load("header.html", function () {
+				initHeader();
+			});
+      $("#footer").load("footer.html");
+
+      //数字动效
+      $(function () {
+        var _countOptions = { useEasing: false, useGrouping: false };
+        var demo1 = new CountUp(
+          "countUp1",
+          0,
+          parseFloat($("#countUp1").text()),
+          0,
+          1.5,
+          _countOptions
+        );
+        var demo2 = new CountUp(
+          "countUp2",
+          0,
+          parseFloat($("#countUp2").text()),
+          0,
+          1.5,
+          _countOptions
+        );
+        var demo3 = new CountUp(
+          "countUp3",
+          0,
+          parseFloat($("#countUp3").text()),
+          0,
+          1.5,
+          _countOptions
+        );
+        var demo4 = new CountUp(
+          "countUp4",
+          0,
+          parseFloat($("#countUp4").text()),
+          0,
+          1.5,
+          _countOptions
+        );
+        scrollx = $(window).scrollTop();
+        startAnimate();
+        $(window).scroll(function () {
+          scrollx = $(window).scrollTop();
+          startAnimate();
+        });
+
+        function startAnimate() {
+          if (scrollx + $(window).height() >= $(".number-list").offset().top) {
+            demo1.start();
+            demo2.start();
+            demo3.start();
+            demo4.start();
+            $(".number-list").addClass("active");
+          } else {
+            demo1.reset();
+            demo2.reset();
+            demo3.reset();
+            demo4.reset();
+          }
+        }
+      });
+      function onChangeTab(index) {
+        let content1 = document.getElementById("tabContent1");
+        let content2 = document.getElementById("tabContent2");
+        let content3 = document.getElementById("tabContent3");
+
+        if (index == 1) {
+          content1.innerHTML = "IOS APP1";
+        } else if (index == 2) {
+          content2.innerHTML = "安卓 APP";
+        } else if (index == 3) {
+          content3.innerHTML = "HTML5";
+        } else {
+          content1.innerHTML = "IOS APP1";
+        }
+      }
+
+			$(document).ready(function() {
+				$('.tabs-slick').not('.slick-initialized').slick({
+					infinite: true,
+					slidesToShow: 7,
+					slidesToScroll: 1,
+					autoplay: true,
+					centerMode: false,
+					speed: 600,
+					arrows: true,
+					dots: true,
+				});
+			});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>棋牌</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <style>
+      .body-container {
+        width: 100%;
+        background: #202020;
+        background-size: cover;
+        margin: 0 auto;
+      }
+
+      .main-container {
+        width: 1000px;
+        height: auto;
+        margin: 0 auto;
+        background: url("images/card/chess-cont-bg.png") no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .chessContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px;
+        margin: 0;
+      }
+
+      .chessItem {
+        margin: 20px 0;
+        width: 30%;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .chessItem img {
+        width: 85%;
+        transition: transform 0.3s ease;
+      }
+
+      .chessItem:hover img {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div class="body-container">
+      <div style="margin: 0 auto; padding: 50px">
+        <div class="main-container">
+          <ul class="chessContent">
+            <!-- 高登棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_gd.png" />
+              </a>
+            </li>
+            <!-- WG棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_wg.png" />
+              </a>
+            </li>
+            <!-- 瓦力棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_wl.png" />
+              </a>
+            </li>
+            <!-- BBIN棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_bbin.png" />
+              </a>
+            </li>
+            <!-- 开元棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_ky.png" />
+              </a>
+            </li>
+            <!-- 天游棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_ty.png" />
+              </a>
+            </li>
+            <!-- LEG乐游棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_ly.png" />
+              </a>
+            </li>
+            <!-- 幸运棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_lucky.png" />
+              </a>
+            </li>
+            <!-- 美博棋牌 -->
+            <!-- <li class="chessItem">
+                    <a href="javascript:void(0)"
+                    <img src="images/card/card_mb.png">
+                    </a>
+                </li> -->
+            <!-- KX棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_kx.png" />
+              </a>
+            </li>
+            <!-- 欢乐棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_happy.png" />
+              </a>
+            </li>
+            <!-- VG棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_vg.png" />
+              </a>
+            </li>
+            <!-- DB棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_db.png" />
+              </a>
+            </li>
+            <!-- 新世界棋牌 -->
+            <!-- <li class="chessItem">
+                    <a href="javascript:void(0)"
+                    <img src="images/card/card_new.png">
+                    </a>
+                </li> -->
+            <!-- 博乐棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_bl.png" />
+              </a>
+            </li>
+            <!-- 双赢棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_tw.png" />
+              </a>
+            </li>
+            <!-- 百胜棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_bs.png" />
+              </a>
+            </li>
+            <!-- 凯旋棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_ks.png" />
+              </a>
+            </li>
+            <!-- S365棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_365.png" />
+              </a>
+            </li>
+            <!-- FG棋牌 -->
+            <li class="chessItem">
+              <a href="javascript:void(0)">
+                <img src="images/card/card_fg.png" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+      $("#header").load("header.html", function () {
+        activateNavHighlight();
+      });
+      $("#footer").load("footer.html");
+    </script>
+  </body>
+</html>

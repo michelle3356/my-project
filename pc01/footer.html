@@ -1,0 +1,246 @@
+<style>
+  .footer {
+    width: 100%;
+    background: url("images/footer_bg.png") no-repeat #1c171d;
+    background-position: 50%;
+    color: #fff;
+  }
+
+  .footer,
+  .footer-con {
+    height: 144px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-con {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .footer-logo {
+    height: 70px;
+    margin-right: 20px;
+  }
+
+  .footer-logo img {
+    height: 70px;
+  }
+
+  .footer-nav > div:last-child {
+    margin-top: 10px;
+  }
+
+  .footer-nav-top a {
+    display: inline-block;
+    padding: 0 5px;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .footer-nav-top > a:last-child {
+    border-right: none;
+    color: #c8a675;
+  }
+
+  .footer-right {
+    width: 240px;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    justify-content: center;
+  }
+
+  .footer-right > div:last-child {
+    margin-top: 10px;
+  }
+
+  .footer-right img {
+    height: 22px;
+    margin-right: 10px;
+  }
+
+  .footer-right > div {
+    display: flex;
+    align-items: center;
+  }
+
+  /* 右下底部栏位 */
+  .footer-bottom {
+    height: 40px;
+    background: #c8a675;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 5px 20px;
+    min-width: 310px;
+  }
+
+  /* 右侧栏位 */
+  .right-column {
+    width: 50px;
+    position: fixed;
+    z-index: 2;
+    right: 20px;
+    bottom: 60px;
+  }
+
+  .right-column-list {
+    border-radius: 5px;
+    position: relative;
+    flex-wrap: wrap;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .right-column-list,
+  .right-column-list:hover > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-column-list:hover > span {
+    color: #fff;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+
+  .right-column-list:hover > img {
+    display: none;
+  }
+
+  .right-column-list:hover > div {
+    display: flex;
+  }
+
+  .right-column-list-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .right-column-list-text {
+    display: none;
+    border: 1px solid #c8a675;
+    height: 50px;
+    width: 50px;
+    background-color: #c8a675;
+    border-radius: 5px;
+  }
+
+  .right-column-list-second1,
+  .right-column-list-second2 {
+    width: 164px;
+    height: 164px;
+    border: 1px solid #c8a675;
+    background-color: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-column-list-second1 img,
+  .right-column-list-second2 img {
+    width: 135px;
+    height: 135px;
+    display: block;
+    margin: auto;
+  }
+
+  .right-column-list-second1 {
+    right: 60px;
+  }
+
+  .right-column-list-second2 {
+    right: 240px;
+  }
+
+  .right-column-list-second-text {
+    text-align: center;
+    color: #c8a675;
+  }
+</style>
+<div class="footer">
+  <div class="footer-con">
+    <div class="footer-logo">
+      <img src="images/logo.svg" alt="" />
+    </div>
+    <div class="footer-nav">
+      <div class="footer-nav-top">
+        <a href="javascript:void(0)">用户协议</a>
+        <a href="javascript:void(0)">关于我们</a>
+        <a href="javascript:void(0)">博彩责任</a>
+        <a href="javascript:void(0)">免责条款</a>
+        <a href="javascript:void(0)">用户隐私</a>
+        <a href="javascript:void(0)">帮助中心</a>
+        <a href="javascript:void(0)">防劫持教程</a>
+        <a href="javascript:void(0)" target="_blank">在线客服</a>
+      </div>
+      <div>Copyright © 2025</div>
+    </div>
+    <div class="footer-right">
+      <div>
+        <img src="images/footer_icon1.png" alt="" />
+        <img src="images/footer_icon2.png" alt="" />
+      </div>
+      <div>友情提示：游戏有风险，量力乐其中</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-bottom">地址:网站主域名</div>
+
+<div class="right-column">
+  <a class="right-column-list" href="javascript:void(0)" target="_blank">
+    <img class="right-column-list-img" src="images/icon_zxkf.png" alt="" />
+    <span class="right-column-list-text">联系<br />客服</span>
+  </a>
+  <div class="right-column-list">
+    <img class="right-column-list-img" src="images/icon_app.png" alt="" />
+    <span class="right-column-list-text">APP<br />下载</span>
+    <div class="right-column-list-second1">
+      <img src="/" alt="" />
+      <div class="right-column-list-second-text">Android</div>
+    </div>
+    <div class="right-column-list-second2">
+      <img src="/" alt="" />
+      <div class="right-column-list-second-text">IOS</div>
+    </div>
+  </div>
+  <a class="right-column-list" href="javascript:void(0)">
+    <img class="right-column-list-img" src="images/icon_help.png" alt="" />
+    <span class="right-column-list-text">帮助<br />中心</span>
+  </a>
+  <div class="right-column-list" onclick="scrollToTop()">
+    <img class="right-column-list-img" src="images/icon_top.png" alt="" />
+    <span class="right-column-list-text">返回<br />顶部</span>
+  </div>
+</div>
+
+<script>
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+</script>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+    <style>
+      .sport-content-bg {
+        background: #202020;
+      }
+
+      .sport-content {
+        width: 1200px;
+        margin: auto;
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .sport-item {
+        width: 250px;
+        box-sizing: border-box;
+        flex: 1;
+      }
+
+      .sport-item:hover img {
+        border: 2px solid #f90;
+      }
+
+      .sport-item img {
+        width: 270px;
+        height: auto;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <div class="sport-content-bg">
+      <ul class="sport-content">
+        <!-- fb -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_fb.png" alt="" />
+          </a>
+        </li>
+        <!-- wl -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_wl.jpg" alt="" />
+          </a>
+        </li>
+        <!-- bbin -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_bbin.jpg" alt="" />
+          </a>
+        </li>
+        <!-- ibc -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_ibc.jpg" alt="" />
+          </a>
+        </li>
+        <!-- cr -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_cr.jpg" alt="" />
+          </a>
+        </li>
+        <!-- 188 -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_188.png" alt="" />
+          </a>
+        </li>
+        <!-- ky -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_ky.jpg" alt="" />
+          </a>
+        </li>
+        <!-- pd -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_pd.jpg" alt="" />
+          </a>
+        </li>
+        <!-- ws -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_ws.jpg" alt="" />
+          </a>
+        </li>
+        <!-- cmd -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_cmd.png" alt="" />
+          </a>
+        </li>
+        <!-- ug -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_ug.jpg" alt="" />
+          </a>
+        </li>
+        <!-- m9 -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_m9.jpg" alt="" />
+          </a>
+        </li>
+        <!-- dp -->
+        <li class="sport-item">
+          <a href="javascript:void(0)">
+            <img src="images/sport/sport_dp.jpg" alt="" />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div id="footer"></div>
+    <script>
+      $("#header").load("header.html", function () {
+        activateNavHighlight();
+      });
+      $("#footer").load("footer.html");
+    </script>
+  </body>
+</html>
