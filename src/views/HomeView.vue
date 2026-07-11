@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type Component } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { FerrisWheel, LineChart as LineIcon, RefreshCw, ShoppingCart, Ticket } from 'lucide-vue-next'
+import { FerrisWheel, Layers3, LineChart as LineIcon, Monitor, RefreshCw, ShoppingCart, Ticket } from 'lucide-vue-next'
 import ProjectCard from '@/components/ProjectCard.vue'
 
 const { t } = useI18n()
@@ -56,20 +56,20 @@ const projects: Project[] = [
     icon: Ticket,
     color: 'from-yellow-600/20 to-amber-400/20',
   },
-  // {
-  //   titleKey: 'templateDemo.title',
-  //   descriptionKey: 'templateDemo.desc',
-  //   name: 'templateDemo',
-  //   icon: Layers3,
-  //   color: 'from-cyan-600/20 to-cyan-400/20',
-  // },
-  // {
-  //   titleKey: 'pcPlatform.title',
-  //   descriptionKey: 'pcPlatform.desc',
-  //   name: 'pcPlatform',
-  //   icon: Monitor,
-  //   color: 'from-orange-600/20 to-amber-400/20',
-  // },
+  {
+    titleKey: 'templateDemo.title',
+    descriptionKey: 'templateDemo.desc',
+    name: 'templateDemo',
+    icon: Layers3,
+    color: 'from-cyan-600/20 to-cyan-400/20',
+  },
+  {
+    titleKey: 'pcPlatform.title',
+    descriptionKey: 'pcPlatform.desc',
+    name: 'pcPlatform',
+    icon: Monitor,
+    color: 'from-orange-600/20 to-amber-400/20',
+  },
 ]
 
 // onMounted(() => {
