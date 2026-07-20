@@ -21,13 +21,13 @@ interface Prize {
 }
 
 const prizes = computed<Prize[]>(() => [
-  { name: `100 USDT`, color: '#FF6B6B' },
+  { name: `$100`, color: '#FF6B6B' },
   { name: t('wheel.betterLuck'), color: '#4ECDC4' },
-  { name: `50 USDT`, color: '#FFE66D' },
+  { name: `$50`, color: '#FFE66D' },
   { name: t('wheel.betterLuck'), color: '#1A535C' },
-  { name: `20 USDT`, color: '#F7FFF7' },
+  { name: `$20`, color: '#F7FFF7' },
   { name: t('wheel.betterLuck'), color: '#FF9F1C' },
-  { name: `10 USDT`, color: '#7067CF' },
+  { name: `$10`, color: '#7067CF' },
   { name: t('wheel.betterLuck'), color: '#FF9F1C' },
 ])
 

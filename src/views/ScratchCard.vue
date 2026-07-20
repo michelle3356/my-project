@@ -26,10 +26,10 @@ interface Card {
 }
 
 const PRIZE_POOL = computed(() => [
-  { name: '100 USDT', isWin: true, color: 'from-yellow-500 to-amber-400', weight: 3 },
-  { name: '50 USDT', isWin: true, color: 'from-purple-500 to-indigo-500', weight: 7 },
-  { name: '20 USDT', isWin: true, color: 'from-blue-500 to-cyan-400', weight: 15 },
-  { name: '10 USDT', isWin: true, color: 'from-emerald-500 to-teal-400', weight: 25 },
+  { name: '$100', isWin: true, color: 'from-yellow-500 to-amber-400', weight: 3 },
+  { name: '$50', isWin: true, color: 'from-purple-500 to-indigo-500', weight: 7 },
+  { name: '$20', isWin: true, color: 'from-blue-500 to-cyan-400', weight: 15 },
+  { name: '$10', isWin: true, color: 'from-emerald-500 to-teal-400', weight: 25 },
   { name: t('scratch.miss'), isWin: false, color: 'from-slate-600 to-slate-500', weight: 50 },
 ])
 
