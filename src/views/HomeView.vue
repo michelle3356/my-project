@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type Component } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { FerrisWheel, Layers3, LineChart as LineIcon, Monitor, RefreshCw, ShoppingCart, Ticket } from 'lucide-vue-next'
+import { FerrisWheel, LineChart as LineIcon, RefreshCw, ShoppingCart, Ticket } from 'lucide-vue-next'
 import ProjectCard from '@/components/ProjectCard.vue'
 
 const { t } = useI18n()
