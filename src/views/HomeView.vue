@@ -56,20 +56,20 @@ const projects: Project[] = [
     icon: Ticket,
     color: 'from-yellow-600/20 to-amber-400/20',
   },
-  {
-    titleKey: 'templateDemo.title',
-    descriptionKey: 'templateDemo.desc',
-    name: 'templateDemo',
-    icon: Layers3,
-    color: 'from-cyan-600/20 to-cyan-400/20',
-  },
-  {
-    titleKey: 'pcPlatform.title',
-    descriptionKey: 'pcPlatform.desc',
-    name: 'pcPlatform',
-    icon: Monitor,
-    color: 'from-orange-600/20 to-amber-400/20',
-  },
+  // {
+  //   titleKey: 'templateDemo.title',
+  //   descriptionKey: 'templateDemo.desc',
+  //   name: 'templateDemo',
+  //   icon: Layers3,
+  //   color: 'from-cyan-600/20 to-cyan-400/20',
+  // },
+  // {
+  //   titleKey: 'pcPlatform.title',
+  //   descriptionKey: 'pcPlatform.desc',
+  //   name: 'pcPlatform',
+  //   icon: Monitor,
+  //   color: 'from-orange-600/20 to-amber-400/20',
+  // },
 ]
 
 // onMounted(() => {
